@@ -3,12 +3,10 @@ name: deploy
 on:
   push:
     branches:
-      - master
-      - main
+      - my-website
   pull_request:
     branches:
-      - master
-      - main
+      - my-website
   workflow_dispatch:
 
 permissions:
