@@ -24,17 +24,28 @@
     ]
   },
   "work": [
-    // {
-    //   "name": "School of Computation, Information and Technology, Technical University of Munich",
-    //   "position": "Ph.D. Researcher",
-    //   "url": "https://example.com",
-    //   "startDate": "2022-06-10",
-    //   "endDate": "Present",
-    //   "summary": "Ph.D. Researcher in the field of Machine Learning for Graphs",
-    //   "highlights": [
-    //     "Machine Learning", "Graphs", "Deep Learning", "Relational Learning"
-    //   ]
-    // }
+    {
+      "name": "Data Analytics and Machine Learning Chair, Technical University of Munich",
+      "position": "Research Assistant",
+      "url": "https://www.cs.cit.tum.de/en/daml/home/",
+      "startDate": "2022-06-10",
+      "endDate": "Present",
+      "summary": "Ph.D. Researcher in the field of Machine Learning for Graphs",
+      "highlights": [
+        "Machine Learning", "Graphs", "Deep Learning", "Relational Learning"
+      ]
+    },
+    {
+      "name": "Siena Artificial Intelligence Lab, Università degli Studi di Siena",
+      "position": "Research Assistant",
+      "url": "https://sailab.diism.unisi.it/",
+      "startDate": "2020-07",
+      "endDate": "2022-04",
+      "summary": "Research intern during the period of the MSc Thesis on Deep Learning for Logical Reasoning",
+      "highlights": [
+        "Machine Learning", "Logical Reasoning", "Deep Learning", "Relational Learning"
+      ]
+    }
   ],
   "volunteer": [],
   "education": [
