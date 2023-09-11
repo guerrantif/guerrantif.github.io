@@ -5,5 +5,5 @@ title: CV
 nav: true
 nav_order: 3
 cv_pdf: guerranti_filippo_cv.pdf
-description: This is a description of the page. You can modify it in 'pages/_cv.md'. You can also change or remove the top pdf download button.
+description: Here you can find a brief summary of my past. In case you want to know more about me, just download the pdf version of my CV, or get in contact with me ;)
 ---
