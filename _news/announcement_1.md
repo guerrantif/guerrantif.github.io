@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2022-06-10
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+I start my journey as a Ph.D. Student in Machine Learning for Graphs at the Data Analytics and Machine Learning Chair at TUM!
