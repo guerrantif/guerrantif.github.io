@@ -13,8 +13,6 @@ nav_order: 1
 
 <p>An up-to-date list is available on <a href="https://scholar.google.com/citations?user=uekwkvYAAAAJ" target="_blank">Google Scholar</a>.</p>
 
-<!-- {% bibliography -f {{ site.scholar.bibliography }} %} -->
-
 <h1> conferences & journals </h1>
 {% bibliography -f {{ site.scholar.bibliography }} -q @*[category=conference]* %}
 
