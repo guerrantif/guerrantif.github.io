@@ -16,10 +16,7 @@ nav_order: 1
 <!-- {% bibliography -f {{ site.scholar.bibliography }} %} -->
 
 <h1> conferences & journals </h1>
-{% for y in page.years %}
-  <h2 class="year">{{y}}</h2>
-  {% bibliography -f {{ site.scholar.bibliography }} -q @*[year={{y}},category=conference]* %}
-{% endfor %}
+{% bibliography -f {{ site.scholar.bibliography }} -q @*[category=conference]* %}
 
 <!-- <h1> workshops </h1>
 {% bibliography -f {{ site.scholar.bibliography }} -q @*[category=workshop]* %} -->
