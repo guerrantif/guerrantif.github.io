@@ -1,0 +1,159 @@
+// Publications styling using Apollo theme variables and SCSS features
+.publications-list {
+    margin-top: 2rem;
+}
+
+.publication-item {
+    margin-bottom: 2.5rem;
+
+    // Publication title styling
+    .publication-title {
+        margin: 0 0 0.5rem 0;
+        font-weight: 600;
+        line-height: 1.4;
+
+        a {
+            color: var(--text-0);
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    // Meta information (authors, venue)
+    .publication-meta {
+        margin-bottom: 0.75rem;
+        font-size: 0.9rem;
+        color: var(--text-1);
+        line-height: 1.5;
+    }
+
+    .publication-authors {
+        strong {
+            color: var(--text-0);
+        }
+
+        a {
+            color: var(--text-1);
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .publication-venue {
+        margin: 0.25rem 0;
+    }
+
+    // Status and awards
+    .publication-status {
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0.25rem 0;
+        color: var(--text-1);
+    }
+
+    .publication-awards {
+        margin: 0.5rem 0;
+
+        .award-badge {
+            display: inline-block;
+            color: var(--accent-color);
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+    }
+
+    // Abstract
+    .publication-abstract {
+        margin: 0.75rem 0;
+        font-style: italic;
+        font-size: 0.9rem;
+        color: var(--text-1);
+
+        p {
+            margin: 0;
+        }
+    }
+
+    // Keywords
+    .publication-keywords {
+        margin: 0.75rem 0;
+
+        .keyword-tag {
+            display: inline-block;
+            color: var(--text-1);
+            margin: 0.15rem 0.5rem 0.15rem 0;
+            font-size: 0.75rem;
+        }
+    }
+
+    // Links section
+    .publication-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.75rem;
+        align-items: flex-start;
+
+        .pub-link {
+            display: inline-block;
+            color: var(--text-0);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-family: var(--mono-text-font);
+            margin-right: 0.75rem;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        // BibTeX dropdown
+        .bibtex-details {
+            align-self: flex-start;
+
+            summary {
+                cursor: pointer;
+                list-style: none;
+                color: var(--text-0);
+                font-size: 0.8rem;
+                font-family: var(--mono-text-font);
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .bibtex-content {
+                margin: 0.5rem 0 0 0;
+                background: var(--bg-1);
+                padding: 0.75rem;
+                border-radius: 0.25rem;
+                font-family: var(--code-font);
+                font-size: 0.75rem;
+                line-height: 1.4;
+                overflow-x: auto;
+                white-space: pre;
+            }
+        }
+    }
+}
+
+// Mobile responsive
+@media (max-width: 768px) {
+    .publications-list {
+        .publication-links {
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+    }
+}

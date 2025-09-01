@@ -1,0 +1,47 @@
+// Homepage styling using Apollo theme variables and SCSS features
+.homepage-hero {
+    text-align: center;
+    padding: 2rem 0;
+
+    .homepage-hero-title {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .homepage-hero-subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .homepage-hero-description {
+        // font-style: italic;
+        color: var(--text-1);
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.homepage-section {
+    margin-bottom: 2rem;
+
+    h2 {
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        margin-bottom: 1rem;
+    }
+
+    li {
+        margin-bottom: 0.25rem;
+    }
+
+    a {
+        color: var(--text-0);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
