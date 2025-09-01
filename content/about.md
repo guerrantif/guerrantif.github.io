@@ -5,7 +5,7 @@ path = "about"
 
 ## research
 
-i'm a phd researcher at [tum](https://www.tum.de), working with the [daml](https://www.cs.cit.tum.de/daml) chair under the supervision of [prof. dr. stephan günnemann](https://www.cs.cit.tum.de/daml/team/guennemann/). my research focuses on machine learning for graphs and structured data, covering representation methods, theoretical foundations, and practical applications.
+i'm a phd researcher at [tum](https://www.tum.de), working with the [daml](https://www.cs.cit.tum.de/daml) chair under the supervision of [prof. dr. stephan günnemann](https://www.cs.cit.tum.de/daml/guennemann/). my research focuses on machine learning for graphs and structured data, covering representation methods, theoretical foundations, and practical applications.
 
 ## philosophy
 
