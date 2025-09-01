@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% import "macros/macros.html" as post_macros %}
+
+{% block main_content %}
+    {{ post_macros::page_header(title=section.title) }}
+
+    <main>
+        {% set publications_data = load_data(path="data/publications.yml") %}
+        
+        {% if publications_data.publications %}
+            <div class="publications-list">
+                {% for pub in publications_data.publications %}
+                    <div class="publication-item" {% if pub.id %}id="{{ pub.id }}"{% endif %}>
+                        <div class="publication-header">
+                            <h1 class="publication-title">{{ pub.title }}</h1>
+                            
+                            <div class="publication-meta">
+                                <span class="publication-authors">
+                                    {% for author_key in pub.authors -%}
+                                        {%- set clean_key = author_key | replace(from="*", to="") -%}
+                                        {%- if publications_data.authors[clean_key] -%}
+                                            {%- set author = publications_data.authors[clean_key] -%}
+                                            {%- if clean_key == "FG" -%}
+                                                <strong>{{ author.name }}</strong>
+                                            {%- elif author.website -%}
+                                                <a href="{{ author.website }}" target="_blank" rel="noopener noreferrer">{{ author.name }}</a>
+                                            {%- else -%}
+                                                {{ author.name }}
+                                            {%- endif -%}
+                                            {%- if author_key is containing("*") -%}*{%- endif -%}
+                                        {%- else -%}
+                                            {{ author_key }}
+                                        {%- endif -%}
+                                        {%- if not loop.last %}, {% endif -%}
+                                    {% endfor %}
+                                </span>
+                                
+                                <div class="publication-venue">
+                                    <em>{{ pub.venue }}</em>, {{ pub.year }}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        {% if pub.links %}
+                            <div class="publication-links">
+                                {% for link_type, url in pub.links %}
+                                    <a href="{{ url }}" class="pub-link" target="_blank" rel="noopener noreferrer">
+                                        {{ link_type }}
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No publications found.</p>
+        {% endif %}
+    </main>
+{% endblock main_content %}

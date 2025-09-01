@@ -1,0 +1,44 @@
+base_url = "https://filippoguerranti.com"
+title = "filippo guerranti"
+description = "filippo guerranti's personal website"
+compile_sass = true
+build_search_index = false
+minify_html = true
+taxonomies = [{ name = "tags" }]
+
+theme = "apollo"
+
+[markdown]
+highlight_code = true
+external_links_target_blank = true
+highlight_theme = "css"
+highlight_themes_css = [
+  { theme = "ayu-dark", filename = "syntax-theme-dark.css" },
+  { theme = "ayu-light", filename = "syntax-theme-light.css" },
+]
+
+
+[extra]
+theme = "toggle" # options: auto, toggle
+favicon = "/icons/favicon.ico"
+toc = false
+fancy_code = true
+mathjax = true
+mathjax_dollar_inline_enable = true
+
+# Font configuration
+# Options: "charter", "lora", "source-serif-pro", "crimson-text", "playfair-display", "merriweather", "system-serif", "zed" (original)
+font_family = "charter"
+
+socials = [
+  { name = "x", url = "https://x.com/guerrantif", icon = "x-twitter" },
+  { name = "github", url = "https://github.com/not-matthias/", icon = "github" },
+  { name = "linkedin", url = "https://www.linkedin.com/in/filippoguerranti/", icon = "linkedin" },
+  { name = "scholar", url = "https://scholar.google.com/citations?user=filippoguerranti", icon = "google-scholar" }
+]
+
+menu = [
+  { name = "/about", url = "/about", weight = 1 },
+  { name = "/papers", url = "/papers", weight = 2 },
+  { name = "/posts", url = "/posts", weight = 3 },
+]

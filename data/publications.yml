@@ -1,0 +1,78 @@
+authors:
+  FG:
+    name: Filippo Guerranti
+    website: https://filippoguerranti.com
+  SGe:
+    name: Simon Geisler
+    website: https://www.linkedin.com/in/simon-geisler-ai/
+  SG:
+    name: Stephan Günnemann
+    website: https://www.cs.cit.tum.de/daml/guennemann/
+  KS:
+    name: Kristiyan Sakalyan
+    website: https://www.linkedin.com/in/kristiyan-sakalyan
+  AP:
+    name: Alessandro Palma
+    website: https://www.linkedin.com/in/alessandro-palma-3632951b3
+  FJT:
+    name: Fabian J Theis
+    website: https://www.helmholtz-munich.de/icb/pi/fabian-theis
+  MK:
+    name: Marcel Kollovieh
+    website: https://marcelkollovieh.com
+  RMK:
+    name: Rafiq Mazen Kamel
+    website: https://www.linkedin.com/in/rafiq-mazen
+
+publications:
+  - id: "long_range_wavelets"
+    title: "Long-Range Graph Wavelet Networks"
+    authors: ["FG", "Fabrizio Forte", "SGe", "SG"]
+    year: 2025
+    venue: "Under review at NeurIPS"
+
+  - id: "saft_amr"
+    title: "SAFT: Structure-Aware Fine-Tuning of LLMs for AMR-to-Text Generation"
+    authors: ["RMK*", "FG*", "SGe", "SG"]
+    year: 2025
+    venue: "Structured Knowledge for Large Language Models Workshop at KDD. Under review at NeurIPS"
+    links:
+      openreview: "https://openreview.net/forum?id=M87VMfBRI3"
+
+  - id: "nicheflow"
+    title: "Modeling Microenvironment Trajectories on Spatial Transcriptomics with NicheFlow"
+    authors: ["KS*", "AP*", "FG*", "FJT", "SG"]
+    year: 2025
+    venue: "Generative AI and Biology Workshop at ICML. Under review at NeurIPS"
+    links:
+      openreview: "https://openreview.net/forum?id=YgDKduLX0b"
+
+  - id: "treegen"
+    title: "TreeGen: A Bayesian Generative Model for Hierarchies with Application to Jet Clustering"
+    authors: ["MK", "Nils Fleischmann", "FG", "Bertrand Charpentier", "SG"]
+    year: 2025
+    venue: "Under review at NeurIPS"
+
+  - id: "adversarial_robustness"
+    title: "On the Adversarial Robustness of Graph Contrastive Learning Methods"
+    authors: ["FG", "Zinuo Yi", "Anna Starovoit", "RMK", "SGe", "SG"]
+    venue: "New Frontiers in Graph Learning Workshop at NeurIPS"
+    year: 2023
+    links:
+      openreview: "https://openreview.net/forum?id=wz6l6yLTv1"
+
+  - id: "employee_attrition"
+    title: "A Comparison of Machine Learning Approaches for Predicting Employee Attrition"
+    authors: ["FG", "Giovanna Maria Dimitri"]
+    venue: "Applied Sciences"
+    year: 2023
+    links:
+      paper: "https://www.mdpi.com/2076-3417/13/1/267"
+
+  - id: "caregiver_matcher"
+    title: "CaregiverMatcher: Graph neural networks for connecting caregivers of rare disease patients"
+    authors: ["FG", "Mirco Mannino", "Federica Baccini", "Pietro Bongini", "Niccol Pancino", "Anna Visibelli", "Sara Marziali"]
+    year: 2021
+    venue: "Procedia Computer Science"
+    links:
+      paper: "https://www.sciencedirect.com/science/article/pii/S1877050921016690"
