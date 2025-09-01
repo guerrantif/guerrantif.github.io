@@ -16,17 +16,18 @@ This is a personal academic website built with **Zola** (static site generator) 
 ## Architecture
 
 ### Content Organization
-- **Homepage**: Custom template at `content/_index.md` using "homepage.html"
+- **Homepage**: Custom template at `content/_index.md` using "modular-homepage.html"
 - **Posts**: Blog entries in `content/posts/` with pagination (7 per page)
 - **Papers**: Academic publications at `content/papers/` using "publications.html" template
 - **Projects**: Portfolio items in `content/projects/` using "cards.html" template with weight-based sorting
 
 ### Publications System
-Publications are managed through `publications.yml` in the root directory with structured metadata:
+Publications are managed through `data/publications.yml` with structured metadata:
 - Authors, venues, years, DOIs, abstracts
 - BibTeX entries, keywords, awards
 - Links to PDFs, code repositories, datasets
-- The publications template loads this data via `load_data(path="publications.yml")`
+- The publications template loads this data via `load_data(path="data/publications.yml")`
+- Additional data files in `/data/`: `homepage.yml` and `news.yml` for content management
 
 ### Theme Customization Strategy
 - **Apollo theme** installed as Git submodule in `themes/apollo/`
@@ -40,7 +41,7 @@ Main settings in `config.toml`:
 - Navigation menu (currently: home, posts, papers)
 - Social links and theme toggle (light/dark/auto)
 - Taxonomies enabled for tags
-- Syntax highlighting enabled, Sass compilation disabled
+- Syntax highlighting enabled, Sass compilation enabled
 
 ### Content Front Matter Patterns
 - TOML front matter with extensive metadata support
@@ -56,7 +57,7 @@ Main settings in `config.toml`:
 
 ## Important Notes
 
-- **Data files** like publications.yml should be in the root directory for `load_data()` to work
+- **Data files** like publications.yml should be in the `/data/` directory for `load_data()` to work
 - **Static assets** go in `static/` directory and are copied to output
 - **Theme updates** require Git submodule commands, not package managers
 - The site targets academic/research audience with specific publication display needs

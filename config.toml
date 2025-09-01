@@ -28,7 +28,7 @@ mathjax_dollar_inline_enable = true
 
 # Font configuration
 # Options: "charter", "lora", "source-serif-pro", "crimson-text", "playfair-display", "merriweather", "system-serif", "zed" (original)
-font_family = "zed"
+font_family = "charter"
 
 socials = [
   { name = "x", url = "https://x.com/guerrantif", icon = "x-twitter" },
