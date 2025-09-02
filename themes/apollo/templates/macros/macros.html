@@ -33,7 +33,10 @@
 {% macro list_posts(pages) %}
     <ul>
         {%- for page in pages %}
-            {{ post_macros::list_post(page=page) }}
+            {%- set visible = page.extra.visible | default(value=true) %}
+            {%- if visible %}
+                {{ post_macros::list_post(page=page) }}
+            {% endif -%}
         {% endfor -%}
     </ul>
 {% endmacro list_posts %}
