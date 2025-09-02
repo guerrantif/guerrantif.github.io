@@ -21,7 +21,7 @@ $text-2: lighten($bg-0, 50%);
 
   --hover-color: white;
 
-  .social > img, .search-button > img {
+  .social > img, .search-button > img, .logo > img {
     filter: invert(1);
   }
 }

@@ -17,11 +17,16 @@
 }
 
 nav {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-0);
+    z-index: 100;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0;
 
     /* Mobile-specific adjustments */
     @media (max-width: 600px) {
@@ -56,6 +61,36 @@ nav {
             background-color: transparent;
         }
       }
+
+      .logo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: 6px;
+        border-bottom: unset;
+        background-image: unset;
+
+        > img {
+          border: unset;
+          width: auto;
+          height: 16px;
+          vertical-align: middle;
+        }
+
+        > svg {
+          border: unset;
+          width: auto;
+          height: 25px;
+          vertical-align: middle;
+        }
+
+        &:hover {
+          color: var(--primary-color);
+          background-color: transparent;
+        }
+      }
     }
 
     /* navigation + theme toggle */
@@ -65,7 +100,7 @@ nav {
         flex-wrap: wrap;
         align-items: center;
 
-        #dark-mode-toggle {
+        #case-toggle, #dark-mode-toggle {
             margin-left: 0.5rem;
             padding: 0.1rem;
 
@@ -80,23 +115,6 @@ nav {
             }
         }
     }
-}
-
-/* TODO: Is this still used? */
-.logo {
-  border-bottom: unset;
-  background-image: unset;
-
-  > img {
-    border: unset;
-    width: auto;
-    height: 24px;
-    vertical-align: middle;
-  }
-
-  &:hover {
-    background-color: transparent;
-  }
 }
 
 /* TODO: Is this still used? */
@@ -149,4 +167,9 @@ h5::before {
 h6::before {
   color: var(--primary-color);
   content: "###### ";
+}
+
+.nav-title::before {
+  color: var(--primary-color);
+  content: "# ";
 }

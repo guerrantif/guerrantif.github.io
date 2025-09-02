@@ -1,6 +1,6 @@
 base_url = "https://filippoguerranti.com"
-title = "filippo guerranti"
-description = "filippo guerranti's personal website"
+title = "Filippo Guerranti"
+description = "Filippo Guerranti's personal website"
 author = "Filippo Guerranti"
 compile_sass = true
 build_search_index = false
@@ -22,7 +22,7 @@ highlight_themes_css = [
 
 
 [extra]
-theme = "auto" # options: auto, toggle
+theme = "toggle" # options: auto, toggle
 favicon = "/icons/favicon.ico"
 toc = true
 fancy_code = true
@@ -35,18 +35,21 @@ font_family = "charter"
 
 # Primary color configuration
 # Set custom primary colors for light and dark themes
-primary_color_light = "#2563eb"  # Custom blue for light theme
+primary_color_light = "#60a5fa"  # Custom blue for light theme
 primary_color_dark = "#60a5fa"   # Custom lighter blue for dark theme
 
+# Case configuration
+case_mode = "lowercase"  # Options: "normal", "lowercase"
+
 socials = [
-  { name = "x", url = "https://x.com/guerrantif", icon = "x-twitter" },
-  { name = "github", url = "https://github.com/guerrantif/", icon = "github" },
-  { name = "linkedin", url = "https://www.linkedin.com/in/filippoguerranti/", icon = "linkedin" },
-  { name = "scholar", url = "https://scholar.google.com/citations?user=uekwkvYAAAAJ", icon = "google-scholar" }
+  { name = "X", url = "https://x.com/guerrantif", icon = "x-twitter" },
+  { name = "GitHub", url = "https://github.com/guerrantif/", icon = "github" },
+  { name = "LinkedIn", url = "https://www.linkedin.com/in/filippoguerranti/", icon = "linkedin" },
+  { name = "Scholar", url = "https://scholar.google.com/citations?user=uekwkvYAAAAJ", icon = "google-scholar" }
 ]
 
 menu = [
-  { name = "/papers", url = "/papers", weight = 1 },
-  { name = "/posts", url = "/posts", weight = 2 },
-  { name = "/contact", url = "/contact", weight = 3 },
+  { name = "/Papers", url = "/papers", weight = 1 },
+  { name = "/Posts", url = "/posts", weight = 2 },
+  { name = "/Contact", url = "/contact", weight = 3 },
 ]

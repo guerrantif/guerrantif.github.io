@@ -1,20 +1,19 @@
 +++
-title = "contact"
+title = "Contact"
 +++
 
-for research collaborations, questions about my work, or general interesting discussions, feel free to reach out.
+For research collaborations, questions about my work, or general interesting discussions, feel free to reach out.
 
-- **email**: <span id="email-contact"></span>
-- **social & academic profiles**:
-  - [google scholar](https://scholar.google.com/citations?user=uekwkvYAAAAJ)
-  - [github](https://github.com/guerrantif)
-  - [linkedin](https://www.linkedin.com/in/filippoguerranti/)
-  - [twitter/x](https://x.com/guerrantif)
-- **interests**:
-  - machine learning (in general) for structured data (in particular)
-  - endurance sports and training
-  - (science-based) life optimization
-
+- **Email**: <span id="email-contact"></span>
+- **Social & academic profiles**:
+  - [Google Scholar](https://scholar.google.com/citations?user=uekwkvYAAAAJ)
+  - [GitHub](https://github.com/guerrantif)
+  - [LinkedIn](https://www.linkedin.com/in/filippoguerranti/)
+  - [Twitter/X](https://x.com/guerrantif)
+- **Interests**:
+  - Machine learning (in general) for structured data (in particular)
+  - Endurance sports and training
+  - (Science-based) life optimization
 
 <script>
 // Enhanced email obfuscation to prevent scraping

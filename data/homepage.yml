@@ -1,11 +1,11 @@
 hero:
-  title: "filippo guerranti"
-  subtitle: "phd researcher in machine learning for graphs and structured data"
-  description: "originally from [it], currently in [de]"
+  title: "Filippo Guerranti"
+  subtitle: "PhD researcher in machine learning for graphs and structured data"
+  description: "Originally from [IT], currently in [DE]"
 
 about:
-  research: "i'm a phd researcher at [tum](https://www.tum.de), working with the [daml](https://www.cs.cit.tum.de/daml) chair under the supervision of [prof. dr. stephan günnemann](https://www.cs.cit.tum.de/daml/guennemann/). my research focuses on machine learning for graphs and structured data, covering representation methods, theoretical foundations, and practical applications."
-  
-  philosophy: "i aim to make things work better, whatever that means. clarity and simplicity in design guide my work, and i pursue minimalism and efficiency as ongoing principles. as we say in italy, \"meglio poco ma buono\" — better less, but better."
-  
-  personal: "i'm passionate about endurance sports, particularly triathlon and long-distance events. the discipline and systematic training they demand mirror my approach to research and problem-solving. i value the challenge of optimizing performance, mental and physical, across different aspects of life."
+  research: "I'm a PhD researcher at [TUM](https://www.tum.de), working with the [DAML](https://www.cs.cit.tum.de/daml) chair under the supervision of [Prof. Dr. Stephan Günnemann](https://www.cs.cit.tum.de/daml/guennemann/). My research focuses on machine learning for graphs and structured data, covering representation methods, theoretical foundations, and practical applications."
+
+  philosophy: "I aim to make things work better, whatever that means. Clarity and simplicity in design guide my work, and I pursue minimalism and efficiency as ongoing principles. As we say in Italy, \"<span class=\"highlight-primary\">meglio poco ma buono</span>\" — better less, but better."
+
+  personal: "I'm passionate about endurance sports, particularly triathlon and long-distance events. The discipline and systematic training they demand mirror my approach to research and problem-solving. I value the challenge of optimizing performance, mental and physical, across different aspects of life."

@@ -20,29 +20,31 @@
 
     {# Site title #}
     {% set current_path = current_path | default(value="/") %}
+    {% set case_mode = config.extra.case_mode | default(value="normal") %}
     {% if current_path == "/" %}
-        <title>{{ post_macros::site_title() }}</title>
+        {% set site_title = post_macros::site_title() %}
+        <title>{% if case_mode == "lowercase" %}{{ site_title | lower }}{% else %}{{ site_title }}{% endif %}</title>
         {% if not page_has_og_title %}
             <meta property="og:title"
-                  content="{{ post_macros::site_title() }}" />
+                  content="{% if case_mode == 'lowercase' %}{{ site_title | lower }}{% else %}{{ site_title }}{% endif %}" />
         {% endif %}
 
     {% else %}
-        <title>
-            {% if page.title %}
-                {{ page.title }}
-            {% elif section.title %}
-                {{ section.title }}
-            {% elif config.title %}
-                {{ config.title }}
-            {% else %}
-                Post
-            {% endif %}
-        </title>
+        {% if page.title %}
+            {% set page_title = page.title %}
+        {% elif section.title %}
+            {% set page_title = section.title %}
+        {% elif config.title %}
+            {% set page_title = config.title %}
+        {% else %}
+            {% set page_title = "Post" %}
+        {% endif %}
+        
+        <title>{% if case_mode == "lowercase" %}{{ page_title | lower }}{% else %}{{ page_title }}{% endif %}</title>
 
         {% if not page_has_og_title %}
             <meta property="og:title"
-                  content="{% if page.title -%}{{ page.title }}{% elif config.title -%}{{ config.title }}{% else -%}Post{% endif -%}" />
+                  content="{% if case_mode == 'lowercase' %}{{ page_title | lower }}{% else %}{{ page_title }}{% endif %}" />
         {% endif %}
     {% endif %}
 
@@ -130,6 +132,27 @@
             {% set primary_color_dark = config.extra.primary_color_dark | default(value="#838383") %}
             --primary-color: {{ primary_color_dark }} !important;
         }
+        
+        {% set case_mode = config.extra.case_mode | default(value="normal") %}
+        {% if case_mode == "lowercase" %}
+        :root {
+            /* Transform ALL text content to lowercase */
+        }
+        
+        :root * {
+            text-transform: lowercase !important;
+        }
+        
+        /* Only preserve the original case for these specific elements where it's critical */
+        :root code, 
+        :root pre, 
+        :root .highlight code,
+        :root input[type="url"], 
+        :root input[type="email"],
+        :root .search-input {
+            text-transform: none !important;
+        }
+        {% endif %}
     </style>
 
     {# Syntax theme #}

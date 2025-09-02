@@ -2,10 +2,15 @@
     <div class="left-nav">
         {% if config.extra.logo %}
             <a href={{ config.base_url }} class="logo">
-                <img alt="{{ config.title }}" src="{{ get_url(path=config.extra.logo) }}">
+                {% if config.extra.logo is ending_with(".svg") %}
+                    {% set logo_svg = load_data(path="themes/apollo/static" ~ config.extra.logo, format="plain") %}
+                    {{ logo_svg | replace(from='fill="#000000"', to='fill="currentColor"') | replace(from='fill="rgb(0%, 0%, 0%)"', to='fill="currentColor"') | safe }}
+                {% else %}
+                    <img alt="{{ config.title }}" src="{{ get_url(path=config.extra.logo) }}">
+                {% endif %}
             </a>
         {% else %}
-            <a href={{ config.base_url }}>{{ config.title }}</a>
+            <a href={{ config.base_url }} class="nav-title">{{ config.title }}</a>
         {% endif %}
 
 
