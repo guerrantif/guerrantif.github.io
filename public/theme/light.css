@@ -1,1 +1,1 @@
-:root.light{--text-0: #212121;--text-1: #666;--text-2: #b3b3b3;--bg-0: #fff;--bg-1: #fafafa;--bg-2: #e6e6e6;--border-color: var(--bg-2);--primary-color: #bfbfbf;--hover-color: white}
+:root.light{--text-0: #212121;--text-1: #666;--text-2: #b3b3b3;--bg-0: #fff;--bg-1: #fafafa;--bg-2: #e6e6e6;--border-color: var(--bg-2);--primary-color: #b6b6b6;--hover-color: white;--hover-bg-color: color-mix(in srgb, var(--primary-color) 60%, transparent)}

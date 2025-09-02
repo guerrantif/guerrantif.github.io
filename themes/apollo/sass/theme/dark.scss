@@ -5,8 +5,8 @@ $bg-1: lighten($bg-0, 5%);
 $bg-2: lighten($bg-1, 10%);
 
 $text-0: lighten($bg-0, 87%);
-$text-1: lighten($bg-0, 60%);
-$text-2: lighten($bg-0, 40%);
+$text-1: lighten($bg-0, 70%);
+$text-2: lighten($bg-0, 50%);
 
 :root.dark {
   --text-0: #{$text-0};
@@ -19,8 +19,9 @@ $text-2: lighten($bg-0, 40%);
 
   --border-color: var(--bg-2);
 
-  --primary-color: #bfbfbf;
+  --primary-color: #838383;
   --hover-color: white;
+  --hover-bg-color: color-mix(in srgb, var(--primary-color) 60%, transparent);
 
   .social > img, .search-button > img {
     filter: invert(1);

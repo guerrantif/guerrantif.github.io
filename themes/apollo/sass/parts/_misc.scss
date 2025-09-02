@@ -41,13 +41,13 @@ a {
 
   /* use colored hovering */
   &:hover {
-      background-color: var(--primary-color);
+      background-color: var(--hover-bg-color, var(--primary-color));
       color: var(--hover-color);
   }
 
   /* hover link with child elements (e.g. code)  */
   &:hover > code {
-      background-color: var(--primary-color);
+      background-color: var(--hover-bg-color, var(--primary-color));
       color: var(--hover-color);
 
       /* disable the border + vertical padding  */

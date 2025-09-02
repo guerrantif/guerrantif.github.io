@@ -17,6 +17,7 @@ $text-2: darken($bg-0, 30%);
 
   --border-color: var(--bg-2);
 
-  --primary-color: #bfbfbf;
+  --primary-color: #b6b6b6;
   --hover-color: white;
+  --hover-bg-color: color-mix(in srgb, var(--primary-color) 60%, transparent);
 }
