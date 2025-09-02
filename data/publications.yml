@@ -28,6 +28,7 @@ publications:
   - id: "long_range_wavelets"
     title: "Long-Range Graph Wavelet Networks"
     authors: ["FG", "Fabrizio Forte", "SGe", "SG"]
+    selected: true
     year: 2025
     venue: "Under review at NeurIPS"
 
@@ -36,7 +37,15 @@ publications:
     authors: ["RMK*", "FG*", "SGe", "SG"]
     year: 2025
     venue: "Structured Knowledge for Large Language Models Workshop at KDD. Under review at NeurIPS"
+    selected: true
+    bibtex: |
+      @inproceedings{kamel2025saft,
+        title={SAFT: Structure-Aware Fine-Tuning of LLMs for AMR-to-Text Generation},
+        author={Kamel, Rafiq and Guerranti, Filippo and Geisler, Simon and G{\"u}nnemann, Stephan},
+        booktitle={The First Structured Knowledge for Large Language Models Workshop, KDD2025}
+      }
     links:
+      arxiv: "https://arxiv.org/abs/2507.13381"
       openreview: "https://openreview.net/forum?id=M87VMfBRI3"
 
   - id: "nicheflow"
@@ -44,6 +53,13 @@ publications:
     authors: ["KS*", "AP*", "FG*", "FJT", "SG"]
     year: 2025
     venue: "Generative AI and Biology Workshop at ICML. Under review at NeurIPS"
+    selected: true
+    bibtex: |
+      @inproceedings{sakalyan2025modeling,
+        title={Modeling Microenvironment Trajectories on Spatial Transcriptomics with NicheFlow},
+        author={Sakalyan, Kristiyan and Palma, Alessandro and Guerranti, Filippo and Theis, Fabian J and G{\"u}nnemann, Stephan},
+        booktitle={ICML 2025 Generative AI and Biology (GenBio) Workshop}
+      }
     links:
       openreview: "https://openreview.net/forum?id=YgDKduLX0b"
 
@@ -58,7 +74,15 @@ publications:
     authors: ["FG", "Zinuo Yi", "Anna Starovoit", "RMK", "SGe", "SG"]
     venue: "New Frontiers in Graph Learning Workshop at NeurIPS"
     year: 2023
+    selected: true
+    bibtex: |
+      @inproceedings{guerranti2023adversarial,
+        title={On the Adversarial Robustness of Graph Contrastive Learning Methods},
+        author={Guerranti, Filippo and Yi, Zinuo and Starovoit, Anna and Kamel, Rafiq Mazen and Geisler, Simon and G{\"u}nnemann, Stephan},
+        booktitle={NeurIPS 2023 Workshop: New Frontiers in Graph Learning}
+      }
     links:
+      arxiv: "https://arxiv.org/abs/2311.17853"
       openreview: "https://openreview.net/forum?id=wz6l6yLTv1"
 
   - id: "employee_attrition"
@@ -66,6 +90,17 @@ publications:
     authors: ["FG", "Giovanna Maria Dimitri"]
     venue: "Applied Sciences"
     year: 2023
+    bibtex: |
+      @article{guerranti2022comparison,
+        title={A comparison of machine learning approaches for predicting employee attrition},
+        author={Guerranti, Filippo and Dimitri, Giovanna Maria},
+        journal={Applied Sciences},
+        volume={13},
+        number={1},
+        pages={267},
+        year={2022},
+        publisher={MDPI}
+      }
     links:
       paper: "https://www.mdpi.com/2076-3417/13/1/267"
 
@@ -74,5 +109,15 @@ publications:
     authors: ["FG", "Mirco Mannino", "Federica Baccini", "Pietro Bongini", "Niccol Pancino", "Anna Visibelli", "Sara Marziali"]
     year: 2021
     venue: "Procedia Computer Science"
+    bibtex: |
+      @article{guerranti2021caregivermatcher,
+        title={CaregiverMatcher: Graph neural networks for connecting caregivers of rare disease patients},
+        author={Guerranti, Filippo and Mannino, Mirco and Baccini, Federica and Bongini, Pietro and Pancino, Niccol and Visibelli, Anna and Marziali, Sara},
+        journal={Procedia Computer Science},
+        volume={192},
+        pages={1696--1704},
+        year={2021},
+        publisher={Elsevier}
+      }
     links:
       paper: "https://www.sciencedirect.com/science/article/pii/S1877050921016690"

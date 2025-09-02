@@ -5,7 +5,7 @@
 
     li,
     a {
-        font-family: sans-serif;
+        font-family: var(--text-font);
         color: var(--text-2);
         transition: none;
         border-bottom: none;
@@ -26,13 +26,9 @@
         margin-top: 0;
         margin-bottom: 0;
     }
+    
     & > ul {
         padding-left: 0;
-    }
-
-    li.selected,
-    li.selected > a {
-        color: var(--text-0);
     }
 
     .parent > a {

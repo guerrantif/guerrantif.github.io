@@ -4,6 +4,7 @@ description = "filippo guerranti's personal website"
 compile_sass = true
 build_search_index = false
 minify_html = true
+generate_feeds = true
 taxonomies = [{ name = "tags" }]
 
 theme = "apollo"
@@ -21,7 +22,7 @@ highlight_themes_css = [
 [extra]
 theme = "auto" # options: auto, toggle
 favicon = "/icons/favicon.ico"
-toc = false
+toc = true
 fancy_code = true
 mathjax = true
 mathjax_dollar_inline_enable = true
@@ -34,11 +35,11 @@ socials = [
   { name = "x", url = "https://x.com/guerrantif", icon = "x-twitter" },
   { name = "github", url = "https://github.com/guerrantif/", icon = "github" },
   { name = "linkedin", url = "https://www.linkedin.com/in/filippoguerranti/", icon = "linkedin" },
-  { name = "scholar", url = "https://scholar.google.com/citations?user=filippoguerranti", icon = "google-scholar" }
+  { name = "scholar", url = "https://scholar.google.com/citations?user=uekwkvYAAAAJ", icon = "google-scholar" }
 ]
 
 menu = [
-  # { name = "/about", url = "/about", weight = 1 },
   { name = "/papers", url = "/papers", weight = 1 },
+  { name = "/contact", url = "/contact", weight = 2 },
   # { name = "/posts", url = "/posts", weight = 3 },
 ]

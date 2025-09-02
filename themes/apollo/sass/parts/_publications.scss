@@ -9,7 +9,7 @@
     // Publication title styling
     .publication-title {
         margin: 0 0 0.5rem 0;
-        font-weight: 600;
+        // font-weight: 600;
         line-height: 1.4;
 
         a {
@@ -22,15 +22,8 @@
         }
     }
 
-    // Meta information (authors, venue)
-    .publication-meta {
-        margin-bottom: 0.75rem;
-        font-size: 0.9rem;
-        color: var(--text-1);
-        line-height: 1.5;
-    }
-
     .publication-authors {
+        font-size: 0.9rem;
         strong {
             color: var(--text-0);
         }
@@ -46,59 +39,15 @@
     }
 
     .publication-venue {
-        margin: 0.25rem 0;
-    }
-
-    // Status and awards
-    .publication-status {
-        display: inline-block;
-        font-size: 0.75rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        margin: 0.25rem 0;
-        color: var(--text-1);
-    }
-
-    .publication-awards {
-        margin: 0.5rem 0;
-
-        .award-badge {
-            display: inline-block;
-            color: var(--accent-color);
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-right: 0.5rem;
-        }
-    }
-
-    // Abstract
-    .publication-abstract {
-        margin: 0.75rem 0;
-        font-style: italic;
         font-size: 0.9rem;
-        color: var(--text-1);
-
-        p {
-            margin: 0;
-        }
-    }
-
-    // Keywords
-    .publication-keywords {
-        margin: 0.75rem 0;
-
-        .keyword-tag {
-            display: inline-block;
-            color: var(--text-1);
-            margin: 0.15rem 0.5rem 0.15rem 0;
-            font-size: 0.75rem;
-        }
+        margin: 0.25rem 0;
     }
 
     // Links section
     .publication-links {
         display: flex;
         flex-wrap: wrap;
+        font-size: 0.9rem;
         gap: 0.5rem;
         margin-top: 0.75rem;
         align-items: flex-start;

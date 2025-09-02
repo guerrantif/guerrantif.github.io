@@ -1,0 +1,46 @@
+// Clean footnote styling
+.footnote-reference {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-1);
+    text-decoration: none;
+    vertical-align: super;
+    line-height: 0;
+    
+    &:hover {
+        color: var(--text-0);
+        text-decoration: underline;
+    }
+}
+
+.footnote-definition {
+    margin-top: 0.3rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    
+    &:first-of-type {
+        margin-top: 2rem;
+        padding-top: 1rem;
+    }
+    
+    .footnote-definition-label {
+        font-weight: 500;
+        color: var(--text-1);
+        margin-right: 0.5rem;
+        
+        &::before {
+            content: "[";
+        }
+        
+        &::after {
+            content: "]";
+        }
+    }
+    
+    p {
+        margin: 0;
+        display: inline;
+    }
+}
+
+
