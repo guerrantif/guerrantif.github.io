@@ -1,10 +1,12 @@
 base_url = "https://filippoguerranti.com"
 title = "filippo guerranti"
 description = "filippo guerranti's personal website"
+author = "Filippo Guerranti"
 compile_sass = true
 build_search_index = false
 minify_html = true
 generate_feeds = true
+feed_filenames = ["atom.xml"]
 taxonomies = [{ name = "tags" }]
 
 theme = "apollo"
@@ -40,6 +42,6 @@ socials = [
 
 menu = [
   { name = "/papers", url = "/papers", weight = 1 },
-  { name = "/contact", url = "/contact", weight = 2 },
-  # { name = "/posts", url = "/posts", weight = 3 },
+  { name = "/posts", url = "/posts", weight = 2 },
+  { name = "/contact", url = "/contact", weight = 3 },
 ]

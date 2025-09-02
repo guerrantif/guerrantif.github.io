@@ -1,0 +1,31 @@
+// Reset default browser list margins and padding
+ul, ol {
+    margin: 0;
+    padding-left: 0;
+}
+
+// Apply proper spacing only to main content lists (not TOC or other specialized lists)
+main ul, main ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+// Nested lists in main content should have minimal vertical spacing
+main ul ul, main ul ol, main ol ul, main ol ol {
+    margin: 0;
+}
+
+// List items in main content - use same spacing as line height
+main li {
+    margin: 0;
+    line-height: var(--line-height);
+}
+
+// First and last nested items should not have extra margins
+main li:first-child {
+    margin-top: 0;
+}
+
+main li:last-child {
+    margin-bottom: 0;
+}
