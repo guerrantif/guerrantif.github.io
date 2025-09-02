@@ -4,19 +4,16 @@ title = "contact"
 
 for research collaborations, questions about my work, or general interesting discussions, feel free to reach out.
 
-**email**: <span id="email-contact"></span>
-
-**social & academic profiles**:
-- [google scholar](https://scholar.google.com/citations?user=uekwkvYAAAAJ)
-- [github](https://github.com/guerrantif)
-- [linkedin](https://www.linkedin.com/in/filippoguerranti/)
-- [twitter/x](https://x.com/guerrantif)
-
-**interests**:
-
-- machine learning (in general) for structured data (in particular)
-- endurance sports and training
-- (science-based) life optimization
+- **email**: <span id="email-contact"></span>
+- **social & academic profiles**:
+  - [google scholar](https://scholar.google.com/citations?user=uekwkvYAAAAJ)
+  - [github](https://github.com/guerrantif)
+  - [linkedin](https://www.linkedin.com/in/filippoguerranti/)
+  - [twitter/x](https://x.com/guerrantif)
+- **interests**:
+  - machine learning (in general) for structured data (in particular)
+  - endurance sports and training
+  - (science-based) life optimization
 
 
 <script>
