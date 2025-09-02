@@ -21,7 +21,6 @@ $text-2: lighten($bg-0, 50%);
 
   --primary-color: #838383;
   --hover-color: white;
-  --hover-bg-color: color-mix(in srgb, var(--primary-color) 60%, transparent);
 
   .social > img, .search-button > img {
     filter: invert(1);

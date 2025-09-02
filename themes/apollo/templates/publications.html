@@ -2,72 +2,120 @@
 
 {% import "macros/macros.html" as post_macros %}
 
+{% macro render_pub(pub, publications_data, selected=false) %}
+    <div class="publication-item">
+        <div class="publication-title">{{ pub.title }}</div>
+
+        <div class="publication-authors">
+            {% for author_key in pub.authors -%}
+                {%- set clean_key = author_key | replace(from="*", to="") -%}
+                {%- if publications_data.authors[clean_key] -%}
+                    {%- set author = publications_data.authors[clean_key] -%}
+                    {%- if clean_key == "FG" -%}
+                        <strong>{{ author.name }}</strong>
+                    {%- elif author.website -%}
+                        <a href="{{ author.website }}" target="_blank" rel="noopener noreferrer">{{ author.name }}</a>
+                    {%- else -%}
+                        {{ author.name }}
+                    {%- endif -%}
+                    {%- if author_key is containing("*") -%}*{%- endif -%}
+                {%- else -%}
+                    {{ author_key }}
+                {%- endif -%}
+                {%- if not loop.last %}, {% endif -%}
+            {% endfor %}
+        </div>
+
+        <div class="publication-venue">
+            <em>{{ pub.venue }}</em>, {{ pub.year }}
+        </div>
+
+        {% if pub.links or pub.bibtex %}
+            <div class="publication-links">
+                {% if pub.links %}
+                    {% for link_type, url in pub.links %}
+                        <a href="{{ url }}" class="publication-link" target="_blank" rel="noopener noreferrer">
+                            {{ link_type | lower }}
+                        </a>
+                        <span> | </span>
+                    {% endfor %}
+                {% endif %}
+
+                {% if pub.bibtex %}
+                    <button class="bibtex-copy" onclick="copyBibtex('{{ pub.id }}')"><span>bibtex</span></button>
+                    <textarea id="bibtex-{{ pub.id }}" style="position: absolute; left: -9999px;">{{ pub.bibtex }}</textarea>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+{% endmacro %}
+
 {% block main_content %}
     {% set publications_data = load_data(path="data/publications.yml") %}
     
     <!-- JSON-LD Structured Data for Publications -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Filippo Guerranti",
-      "jobTitle": "PhD Researcher",
-      "affiliation": {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Filippo Guerranti",
+    "jobTitle": "PhD Researcher",
+    "affiliation": {
         "@type": "Organization",
         "name": "Technical University of Munich",
         "url": "https://www.tum.de"
-      },
-      "url": "https://filippoguerranti.com",
-      "sameAs": [
+    },
+    "url": "https://filippoguerranti.com",
+    "sameAs": [
         "https://scholar.google.com/citations?user=uekwkvYAAAAJ",
         "https://github.com/guerrantif",
         "https://www.linkedin.com/in/filippoguerranti/",
         "https://x.com/guerrantif"
-      ],
-      "hasOccupation": {
+    ],
+    "hasOccupation": {
         "@type": "Occupation",
         "name": "Researcher",
         "occupationLocation": {
-          "@type": "Place",
-          "name": "Munich, Germany"
+            "@type": "Place",
+            "name": "Munich, Germany"
         },
         "skills": "Machine Learning for Graphs and Structured Data"
-      },
-      "scholar": [
+    },
+    "scholar": [
         {% for pub in publications_data.publications %}
         {
-          "@type": "ScholarlyArticle",
-          "headline": "{{ pub.title }}",
-          "author": [
+            "@type": "ScholarlyArticle",
+            "headline": "{{ pub.title }}",
+            "author": [
             {% for author_key in pub.authors -%}
-              {%- set clean_key = author_key | replace(from="*", to="") -%}
-              {%- if publications_data.authors[clean_key] -%}
-                {%- set author = publications_data.authors[clean_key] -%}
-                {
-                  "@type": "Person",
-                  "name": "{{ author.name }}"
-                  {%- if author.website -%}, "url": "{{ author.website }}"{%- endif -%}
-                }
-              {%- else -%}
-                {
-                  "@type": "Person", 
-                  "name": "{{ author_key | replace(from="*", to="") }}"
-                }
-              {%- endif -%}
-              {%- if not loop.last %},{% endif -%}
+                {%- set clean_key = author_key | replace(from="*", to="") -%}
+                {%- if publications_data.authors[clean_key] -%}
+                    {%- set author = publications_data.authors[clean_key] -%}
+                    {
+                        "@type": "Person",
+                        "name": "{{ author.name }}"
+                        {%- if author.website -%}, "url": "{{ author.website }}"{%- endif -%}
+                    }
+                {%- else -%}
+                    {
+                        "@type": "Person",
+                        "name": "{{ author_key | replace(from="*", to="") }}"
+                    }
+                {%- endif -%}
+                {%- if not loop.last %},{% endif -%}
             {% endfor %}
-          ],
-          "datePublished": "{{ pub.year }}",
-          "publisher": {
+        ],
+        "datePublished": "{{ pub.year }}",
+        "publisher": {
             "@type": "Organization",
             "name": "{{ pub.venue }}"
-          }
-          {%- if pub.links -%}
-          , "url": "{% for link_type, url in pub.links %}{% if loop.first %}{{ url }}{% endif %}{% endfor %}"
-          {%- endif -%}
+        }
+        {%- if pub.links -%}
+            , "url": "{% for link_type, url in pub.links %}{% if loop.first %}{{ url }}{% endif %}{% endfor %}"
+        {%- endif -%}
         }{% if not loop.last %},{% endif %}
         {% endfor %}
-      ]
+    ]
     }
     </script>
     
@@ -83,52 +131,7 @@
                     <div class="section">
                         <h1 class="section-header">selected</h1>
                         {% for pub in selected_pubs %}
-                            <div class="publication-item">
-                                <div class="publication-title">{{ pub.title }}</div>
-                                
-                                <div class="publication-authors">
-                                    {% for author_key in pub.authors -%}
-                                        {%- set clean_key = author_key | replace(from="*", to="") -%}
-                                        {%- if publications_data.authors[clean_key] -%}
-                                            {%- set author = publications_data.authors[clean_key] -%}
-                                            {%- if clean_key == "FG" -%}
-                                                <strong>{{ author.name }}</strong>
-                                            {%- elif author.website -%}
-                                                <a href="{{ author.website }}" target="_blank" rel="noopener noreferrer">{{ author.name }}</a>
-                                            {%- else -%}
-                                                {{ author.name }}
-                                            {%- endif -%}
-                                            {%- if author_key is containing("*") -%}*{%- endif -%}
-                                        {%- else -%}
-                                            {{ author_key }}
-                                        {%- endif -%}
-                                        {%- if not loop.last %}, {% endif -%}
-                                    {% endfor %}
-                                </div>
-                                
-                                <div class="publication-venue">
-                                    <em>{{ pub.venue }}</em>, {{ pub.year }}
-                                </div>
-                                
-                                {% if pub.links or pub.bibtex %}
-                                    <div class="publication-links">
-                                        {% if pub.links %}
-                                            {% for link_type, url in pub.links %}
-                                                <a href="{{ url }}" class="publication-link" target="_blank" rel="noopener noreferrer">
-                                                    [{{ link_type | lower }}]
-                                                </a>
-                                            {% endfor %}
-                                        {% endif %}
-                                        
-                                        {% if pub.bibtex %}
-                                            <button class="publication-link bibtex-copy" onclick="copyBibtex('{{ pub.id }}')">
-                                                [bibtex]
-                                            </button>
-                                            <textarea id="bibtex-{{ pub.id }}" style="position: absolute; left: -9999px;">{{ pub.bibtex }}</textarea>
-                                        {% endif %}
-                                    </div>
-                                {% endif %}
-                            </div>
+                            {{ self::render_pub(pub=pub, publications_data=publications_data, selected=true) }}
                         {% endfor %}
                     </div>
                 {% endif %}
@@ -138,52 +141,7 @@
                     <h1 class="section-header">rest</h1>
                     {% for pub in publications_data.publications | sort(attribute="year") | reverse %}
                         {% if not pub.selected %}
-                        <div class="publication-item">
-                            <div class="publication-title">{{ pub.title }}</div>
-                            
-                            <div class="publication-authors">
-                                {% for author_key in pub.authors -%}
-                                    {%- set clean_key = author_key | replace(from="*", to="") -%}
-                                    {%- if publications_data.authors[clean_key] -%}
-                                        {%- set author = publications_data.authors[clean_key] -%}
-                                        {%- if clean_key == "FG" -%}
-                                            <strong>{{ author.name }}</strong>
-                                        {%- elif author.website -%}
-                                            <a href="{{ author.website }}" target="_blank" rel="noopener noreferrer">{{ author.name }}</a>
-                                        {%- else -%}
-                                            {{ author.name }}
-                                        {%- endif -%}
-                                        {%- if author_key is containing("*") -%}*{%- endif -%}
-                                    {%- else -%}
-                                        {{ author_key }}
-                                    {%- endif -%}
-                                    {%- if not loop.last %}, {% endif -%}
-                                {% endfor %}
-                            </div>
-                            
-                            <div class="publication-venue">
-                                <em>{{ pub.venue }}</em>, {{ pub.year }}
-                            </div>
-                            
-                            {% if pub.links or pub.bibtex %}
-                                <div class="publication-links">
-                                    {% if pub.links %}
-                                        {% for link_type, url in pub.links %}
-                                            <a href="{{ url }}" class="publication-link" target="_blank" rel="noopener noreferrer">
-                                                [{{ link_type | lower }}]
-                                            </a>
-                                        {% endfor %}
-                                    {% endif %}
-                                    
-                                    {% if pub.bibtex %}
-                                        <button class="publication-link bibtex-copy" onclick="copyBibtex('{{ pub.id }}')">
-                                            [bibtex]
-                                        </button>
-                                        <textarea id="bibtex-{{ pub.id }}" style="position: absolute; left: -9999px;">{{ pub.bibtex }}</textarea>
-                                    {% endif %}
-                                </div>
-                            {% endif %}
-                        </div>
+                            {{ self::render_pub(pub=pub, publications_data=publications_data, selected=false) }}
                         {% endif %}
                     {% endfor %}
                 </div>
@@ -206,13 +164,13 @@
         
         // Visual feedback
         const originalText = button.textContent;
-        button.textContent = 'Copied!';
+        button.textContent = 'copied';
         button.classList.add('copied');
         
         setTimeout(() => {
             button.textContent = originalText;
             button.classList.remove('copied');
-        }, 2000);
+        }, 3000);
     }
     </script>
 {% endblock main_content %}

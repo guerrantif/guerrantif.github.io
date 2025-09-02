@@ -14,7 +14,6 @@
     }
 
     .homepage-hero-description {
-        // font-style: italic;
         color: var(--text-1);
         font-size: 1rem;
         margin-bottom: 1rem;
@@ -36,12 +35,4 @@
         margin-bottom: 0.25rem;
     }
 
-    a {
-        color: var(--text-0);
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
 }
