@@ -33,6 +33,11 @@ mathjax_dollar_inline_enable = true
 # Options: "charter", "lora", "source-serif-pro", "crimson-text", "playfair-display", "merriweather", "system-serif", "zed" (original)
 font_family = "charter"
 
+# Primary color configuration
+# Set custom primary colors for light and dark themes
+primary_color_light = "#2563eb"  # Custom blue for light theme
+primary_color_dark = "#60a5fa"   # Custom lighter blue for dark theme
+
 socials = [
   { name = "x", url = "https://x.com/guerrantif", icon = "x-twitter" },
   { name = "github", url = "https://github.com/guerrantif/", icon = "github" },

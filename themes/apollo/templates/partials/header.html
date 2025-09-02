@@ -90,7 +90,7 @@
         <link href={{ get_url(path="fonts.css") }} rel="stylesheet" />
     {% endif %}
 
-    {# Set CSS font variables based on config #}
+    {# Set CSS font and color variables based on config #}
     <style>
         :root {
             {% set font_family = config.extra.font_family | default(value="lora") %}
@@ -119,6 +119,16 @@
                 --text-font: "ZedTextFtl", "Space Grotesk", sans-serif !important;
                 --header-font: "ZedDisplayFtl", "Space Grotesk", sans-serif !important;
             {% endif %}
+        }
+        
+        :root.light {
+            {% set primary_color_light = config.extra.primary_color_light | default(value="#b6b6b6") %}
+            --primary-color: {{ primary_color_light }} !important;
+        }
+        
+        :root.dark {
+            {% set primary_color_dark = config.extra.primary_color_dark | default(value="#838383") %}
+            --primary-color: {{ primary_color_dark }} !important;
         }
     </style>
 
