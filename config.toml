@@ -19,7 +19,7 @@ highlight_themes_css = [
 
 
 [extra]
-theme = "toggle" # options: auto, toggle
+theme = "auto" # options: auto, toggle
 favicon = "/icons/favicon.ico"
 toc = false
 fancy_code = true
@@ -32,7 +32,7 @@ font_family = "charter"
 
 socials = [
   { name = "x", url = "https://x.com/guerrantif", icon = "x-twitter" },
-  { name = "github", url = "https://github.com/not-matthias/", icon = "github" },
+  { name = "github", url = "https://github.com/guerrantif/", icon = "github" },
   { name = "linkedin", url = "https://www.linkedin.com/in/filippoguerranti/", icon = "linkedin" },
   { name = "scholar", url = "https://scholar.google.com/citations?user=filippoguerranti", icon = "google-scholar" }
 ]
@@ -40,5 +40,5 @@ socials = [
 menu = [
   { name = "/about", url = "/about", weight = 1 },
   { name = "/papers", url = "/papers", weight = 2 },
-  { name = "/posts", url = "/posts", weight = 3 },
+  # { name = "/posts", url = "/posts", weight = 3 },
 ]
