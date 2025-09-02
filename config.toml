@@ -38,7 +38,7 @@ socials = [
 ]
 
 menu = [
-  { name = "/about", url = "/about", weight = 1 },
-  { name = "/papers", url = "/papers", weight = 2 },
+  # { name = "/about", url = "/about", weight = 1 },
+  { name = "/papers", url = "/papers", weight = 1 },
   # { name = "/posts", url = "/posts", weight = 3 },
 ]

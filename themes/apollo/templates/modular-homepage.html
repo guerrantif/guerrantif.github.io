@@ -3,8 +3,6 @@
 
 {% block main_content %}
     {% set homepage_data = load_data(path="data/homepage.yml") %}
-    {% set news_data = load_data(path="data/news.yml") %}
-    {% set publications_data = load_data(path="data/publications.yml") %}
 
     <main>
         <!-- Hero Section -->
@@ -14,44 +12,16 @@
             <p class="homepage-hero-description">{{ homepage_data.hero.description | safe }}</p>
         </div>
 
-
-        <!-- News Section -->
+        <!-- About Section -->
         <section class="homepage-section">
-            <h2>news</h2>
-            <ul>
-                {% for item in news_data.news %}
-                    <li>
-                        <strong>{{ item.date }}</strong>: 
-                        {% if item.links %}
-                            {% set text = item.text %}
-                            {% if item.links.paper %}
-                                {% if item.links.paper.url is starting_with("http") %}
-                                    {% set text = text | replace(from="{{paper}}", to='<a href="' ~ item.links.paper.url ~ '" target="_blank" rel="noopener noreferrer">' ~ item.links.paper.text ~ '</a>') %}
-                                {% else %}
-                                    {% set text = text | replace(from="{{paper}}", to='<a href="' ~ item.links.paper.url ~ '">' ~ item.links.paper.text ~ '</a>') %}
-                                {% endif %}
-                            {% endif %}
-                            {% if item.links.workshop %}
-                                {% if item.links.workshop.url is starting_with("http") %}
-                                    {% set text = text | replace(from="{{workshop}}", to='<a href="' ~ item.links.workshop.url ~ '" target="_blank" rel="noopener noreferrer">' ~ item.links.workshop.text ~ '</a>') %}
-                                {% else %}
-                                    {% set text = text | replace(from="{{workshop}}", to='<a href="' ~ item.links.workshop.url ~ '">' ~ item.links.workshop.text ~ '</a>') %}
-                                {% endif %}
-                            {% endif %}
-                            {% if item.links.venue %}
-                                {% if item.links.venue.url is starting_with("http") %}
-                                    {% set text = text | replace(from="{{venue}}", to='<a href="' ~ item.links.venue.url ~ '" target="_blank" rel="noopener noreferrer">' ~ item.links.venue.text ~ '</a>') %}
-                                {% else %}
-                                    {% set text = text | replace(from="{{venue}}", to='<a href="' ~ item.links.venue.url ~ '">' ~ item.links.venue.text ~ '</a>') %}
-                                {% endif %}
-                            {% endif %}
-                            {{ text | safe }}
-                        {% else %}
-                            {{ item.text }}
-                        {% endif %}
-                    </li>
-                {% endfor %}
-            </ul>
+            <h2>research</h2>
+            <p>{{ homepage_data.about.research | markdown | safe }}</p>
+
+            <h2>philosophy</h2>
+            <p>{{ homepage_data.about.philosophy | markdown | safe }}</p>
+
+            <h2>personal</h2>
+            <p>{{ homepage_data.about.personal | markdown | safe }}</p>
         </section>
     </main>
 {% endblock main_content %}
