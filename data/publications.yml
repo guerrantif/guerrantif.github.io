@@ -106,13 +106,13 @@ publications:
 
   - id: "caregiver_matcher"
     title: "CaregiverMatcher: Graph neural networks for connecting caregivers of rare disease patients"
-    authors: ["FG", "Mirco Mannino", "Federica Baccini", "Pietro Bongini", "Niccol Pancino", "Anna Visibelli", "Sara Marziali"]
+    authors: ["FG", "Mirco Mannino", "Federica Baccini", "Pietro Bongini", "Niccolò Pancino", "Anna Visibelli", "Sara Marziali"]
     year: 2021
     venue: "Procedia Computer Science"
     bibtex: |
       @article{guerranti2021caregivermatcher,
         title={CaregiverMatcher: Graph neural networks for connecting caregivers of rare disease patients},
-        author={Guerranti, Filippo and Mannino, Mirco and Baccini, Federica and Bongini, Pietro and Pancino, Niccol and Visibelli, Anna and Marziali, Sara},
+        author={Guerranti, Filippo and Mannino, Mirco and Baccini, Federica and Bongini, Pietro and Pancino, Niccolò and Visibelli, Anna and Marziali, Sara},
         journal={Procedia Computer Science},
         volume={192},
         pages={1696--1704},
