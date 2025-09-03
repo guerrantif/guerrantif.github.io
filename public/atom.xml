@@ -5,12 +5,12 @@
     <link rel="self" type="application/atom+xml" href="https://filippoguerranti.com/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://filippoguerranti.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-09-02T00:00:00+00:00</updated>
+    <updated>2025-09-03T00:00:00+00:00</updated>
     <id>https://filippoguerranti.com/atom.xml</id>
     <entry xml:lang="en">
-        <title>Please, slow down</title>
-        <published>2025-09-02T00:00:00+00:00</published>
-        <updated>2025-09-02T00:00:00+00:00</updated>
+        <title>Hello, World!</title>
+        <published>2025-09-03T00:00:00+00:00</published>
+        <updated>2025-09-03T00:00:00+00:00</updated>
         
         <author>
           <name>
@@ -20,124 +20,18 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://filippoguerranti.com/posts/please-slow-down/"/>
-        <id>https://filippoguerranti.com/posts/please-slow-down/</id>
+        <link rel="alternate" type="text/html" href="https://filippoguerranti.com/blog/hello-world/"/>
+        <id>https://filippoguerranti.com/blog/hello-world/</id>
         
-        <content type="html" xml:base="https://filippoguerranti.com/posts/please-slow-down/">&lt;h1 id=&quot;i-remember-simplicity-and-slowness&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#i-remember-simplicity-and-slowness&quot; aria-label=&quot;Anchor link for: i-remember-simplicity-and-slowness&quot;&gt;I remember simplicity and slowness&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
-&lt;p&gt;Oh, what a good time it was to be a kid. I wouldn&#x27;t say I had the easiest life one could imagine, but, looking back at those days, I realize how easier life was.
-Maybe not necessarily better, but I&#x27;m confident in saying that it was way less complicated than it is now.&lt;&#x2F;p&gt;
-&lt;p&gt;My mom would wake me up every morning with the gentle sound of her voice, or with some louder calls when she was not in the mood for subtlety.
-I would then have a classic Italian kid breakfast (&lt;a rel=&quot;noopener&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.gocciole.it&quot;&gt;Gocciole biscuits&lt;&#x2F;a&gt; and milk&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;), while thinking about the bad dream that I had the night before.
-My father would then bring me to school, in a mix of silence and random rhetorical questions, such as &quot;What subject do you have first?&quot; or &quot;Do you have football practice today?&quot;&lt;&#x2F;p&gt;
-&lt;p&gt;Once at school, I would occasionally listen to the teacher&#x27;s lecture, while my mind would wander off to other topics or to the book that I was hiding behind the assignment notebook.
-At 10:30, we would have a &quot;short&quot; break, during which my friends and I would talk about the organization of our super secret club. So secret that almost all the school was aware of it&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;.
-I loved the morning break. And then back to the classroom for some more lectures.&lt;&#x2F;p&gt;
-&lt;p&gt;At 13:30, I would take the school bus to my grandma&#x27;s house. I could smell the delicious aroma of the meal she&lt;&#x2F;p&gt;
-&lt;p&gt;My main concern during a typical day was, probably, what would my grandma prepare for lunch, or what would happen to Goku during the next episode.&lt;&#x2F;p&gt;
-&lt;p&gt;But wait. Don&#x27;t jump into conclusions.&lt;&#x2F;p&gt;
-&lt;p&gt;It&#x27;s usually normal to look at the past and think of it as an easier time: all challenges we faced back then look now trivial; all problems seem smaller in hindsight.
-True, but only because we were eventually able to overcome them and grow from those experiences.
-We now know how to tackle similar challenges more effectively, and, most importantly, we know that we will get through them.&lt;&#x2F;p&gt;
-&lt;p&gt;Is it then fair to label the past as just simpler?&lt;&#x2F;p&gt;
-&lt;p&gt;Of course not. Every moment in life has its own challenges and complexities. And every challenge is a challenge because it was significant to us at that time.
-But what I want to focus on here, it&#x27;s not philosophical musings about the nature of time and challenges, but rather the tangible differences in how we lived our lives 20 years ago versus now.&lt;&#x2F;p&gt;
-&lt;p&gt;as a kid:&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;slow morning&lt;&#x2F;li&gt;
-&lt;li&gt;take written notes, spend time writing, correcting, studying them&lt;&#x2F;li&gt;
-&lt;li&gt;use of encyclopedias for deep dives into topics&lt;&#x2F;li&gt;
-&lt;li&gt;watch the same cartoon series every afternoon after school at 2pm, then go play outside&lt;&#x2F;li&gt;
-&lt;li&gt;calling my grandma at dinner time, just to chat&lt;&#x2F;li&gt;
-&lt;li&gt;read a book before going to bed&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h1 id=&quot;the-advent-of-technology&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#the-advent-of-technology&quot; aria-label=&quot;Anchor link for: the-advent-of-technology&quot;&gt;The advent of technology&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
-&lt;ul&gt;
-&lt;li&gt;advent of the internet
-&lt;ul&gt;
-&lt;li&gt;access to my father&#x27;s computer&lt;&#x2F;li&gt;
-&lt;li&gt;discovery of wikipedia -&amp;gt; research became easier&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;phone
-&lt;ul&gt;
-&lt;li&gt;communicate to parents where i&#x27;d be&lt;&#x2F;li&gt;
-&lt;li&gt;instant messaging with friends&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;ipod
-&lt;ul&gt;
-&lt;li&gt;music and games everywhere&lt;&#x2F;li&gt;
-&lt;li&gt;afternoon&#x27;s cartoon became background noise&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;netlog&#x2F;facebook&#x2F;...
-&lt;ul&gt;
-&lt;li&gt;connecting with friends to the extreme&lt;&#x2F;li&gt;
-&lt;li&gt;no more games, but web socializing took over&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;smartphone
-&lt;ul&gt;
-&lt;li&gt;everything became mobile&lt;&#x2F;li&gt;
-&lt;li&gt;social media at our fingertips&lt;&#x2F;li&gt;
-&lt;li&gt;wikipedia-like platforms for information&lt;&#x2F;li&gt;
-&lt;li&gt;general googling for everything&lt;&#x2F;li&gt;
-&lt;li&gt;youtube for different knowledge retrieval (e.g., 3blue1brown and similar)&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h1 id=&quot;abundance-abundance-abundance-abundance-and-yet-abundance&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#abundance-abundance-abundance-abundance-and-yet-abundance&quot; aria-label=&quot;Anchor link for: abundance-abundance-abundance-abundance-and-yet-abundance&quot;&gt;Abundance, abundance, abundance, abundance, and yet abundance&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
-&lt;ul&gt;
-&lt;li&gt;information overload&lt;&#x2F;li&gt;
-&lt;li&gt;constant notifications&lt;&#x2F;li&gt;
-&lt;li&gt;surrounded by screens, words, information everywhere&lt;&#x2F;li&gt;
-&lt;li&gt;constant dopamine hits, always seeking the next reward&lt;&#x2F;li&gt;
-&lt;li&gt;unable to get &quot;bored&quot;&lt;&#x2F;li&gt;
-&lt;li&gt;next video on youtube&lt;&#x2F;li&gt;
-&lt;li&gt;netflix overwatching&lt;&#x2F;li&gt;
-&lt;li&gt;endless scrolling on social media&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;large-language-models&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#large-language-models&quot; aria-label=&quot;Anchor link for: large-language-models&quot;&gt;Large language models&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;deep research simplified&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;looking for something takes seconds instead of hours&lt;&#x2F;li&gt;
-&lt;li&gt;summary of information in seconds -&amp;gt; no need to read long articles&lt;&#x2F;li&gt;
-&lt;li&gt;why writing, if it can be generated instantly?&lt;&#x2F;li&gt;
-&lt;li&gt;why thinking, if llms can &quot;think&quot; for us?&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;li&gt;
-&lt;p&gt;i built this website in hours, not days.&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;have i learned anything in the process?&lt;&#x2F;li&gt;
-&lt;li&gt;have i truly understood the concepts, or just skimmed the surface?&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;h1 id=&quot;minimalism&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#minimalism&quot; aria-label=&quot;Anchor link for: minimalism&quot;&gt;Minimalism&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
-&lt;ul&gt;
-&lt;li&gt;in this abundance, we must find to simplify and get back to the essentials
-&lt;ul&gt;
-&lt;li&gt;focus on less things, but with more depth&lt;&#x2F;li&gt;
-&lt;li&gt;embrace solitude and reflection&lt;&#x2F;li&gt;
-&lt;li&gt;prioritize quality over quantity&lt;&#x2F;li&gt;
-&lt;li&gt;rediscover the challenge of deep work and the rewards coming from it&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
-&lt;p&gt;do yourself a favor and try them, if you haven&#x27;t already.&lt;&#x2F;p&gt;
-&lt;&#x2F;div&gt;
-&lt;div class=&quot;footnote-definition&quot; id=&quot;2&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;2&lt;&#x2F;sup&gt;
-&lt;p&gt;we used to have proper documents signed by all members, with rules and responsibilities clearly outlined.&lt;&#x2F;p&gt;
-&lt;&#x2F;div&gt;
+        <content type="html" xml:base="https://filippoguerranti.com/blog/hello-world/">&lt;pre data-lang=&quot;python&quot; class=&quot;language-python z-code&quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;z-source z-python&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-python&quot;&gt;&lt;span class=&quot;z-meta z-qualified-name z-python&quot;&gt;&lt;span class=&quot;z-variable z-function z-python&quot;&gt;&lt;span class=&quot;z-support z-function z-builtin z-python&quot;&gt;print&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-python&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-arguments z-begin z-python&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-string z-python&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-python&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-python&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-string z-python&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-python&quot;&gt;Hello, World!&lt;span class=&quot;z-punctuation z-definition z-string z-end z-python&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-section z-arguments z-end z-python&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;First blog post on this website.&lt;&#x2F;p&gt;
+&lt;p&gt;In case you are interested to know something more about me or this website, the &lt;a href=&quot;..&#x2F;..&#x2F;about&#x2F;&quot;&gt;About&lt;&#x2F;a&gt; page is a good starting point.&lt;&#x2F;p&gt;
 </content>
         
     </entry>
     <entry xml:lang="en">
-        <title>Review 2025 Q1-Q2-Q3</title>
+        <title>2025 Q1-Q2-Q3 retrospective</title>
         <published>2025-09-02T00:00:00+00:00</published>
         <updated>2025-09-02T00:00:00+00:00</updated>
         
@@ -149,17 +43,73 @@ But what I want to focus on here, it&#x27;s not philosophical musings about the 
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://filippoguerranti.com/posts/review-2025-q1-q2-q3/"/>
-        <id>https://filippoguerranti.com/posts/review-2025-q1-q2-q3/</id>
+        <link rel="alternate" type="text/html" href="https://filippoguerranti.com/blog/review-2025-q1-q2-q3/"/>
+        <id>https://filippoguerranti.com/blog/review-2025-q1-q2-q3/</id>
         
-        <content type="html" xml:base="https://filippoguerranti.com/posts/review-2025-q1-q2-q3/">&lt;h1 id=&quot;preface&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#preface&quot; aria-label=&quot;Anchor link for: preface&quot;&gt;Preface&lt;&#x2F;a&gt;&lt;&#x2F;h1&gt;
-&lt;p&gt;First retrospective that I publish on the website. I honestly haven&#x27;t written any proper review this year, so I thought it would be a good idea to start now. Better late than never.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://filippoguerranti.com/blog/review-2025-q1-q2-q3/">&lt;h2 id=&quot;preface&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#preface&quot; aria-label=&quot;Anchor link for: preface&quot;&gt;Preface&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;First retrospective that I publish on the website. I honestly haven’t written any proper review this year, so I thought it would be a good idea to start now. Better late than never.&lt;&#x2F;p&gt;
 &lt;p&gt;I see this as an exercise to reflect on many different aspects of life, including my work, sports, personal achievements, and challenges. By nature I am prone to analyze what I do in a rather structured way, but for some reasons, converting those thoughts into written words has always been an insurmountable wall for me.&lt;&#x2F;p&gt;
 &lt;p&gt;I tried consistent journaling many times during the past 10 years, but it never really stuck. Probably knowing that those notes could be potentially read by others (despite making sure to keep them private) prevented me from being completely honest and open in my reflections. Yet, I feel an inner urge to write these things down, to clarify my mental processes and gain a deeper understanding of myself.&lt;&#x2F;p&gt;
-&lt;p&gt;You might wonder: &quot;Why, then, publish it online?&quot;&lt;&#x2F;p&gt;
-&lt;p&gt;I don&#x27;t know. Maybe it&#x27;s the responsibility that comes with having an audience, however small. Knowing that others might read my thoughts pushes me to articulate them more clearly and thoughtfully. It transforms a private reflection into a public dialogue, inviting feedback and connection. In a way, it&#x27;s a commitment to my own growth and accountability.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;span class=&quot;highlight-primary&quot;&gt;Commitment&lt;&#x2F;span&gt;. This is what I&#x27;m missing; hence, this is what I want to cultivate through this practice.&lt;&#x2F;p&gt;
-&lt;p&gt;Time to get to the meat of the matter. During one of the many periods of my life&lt;&#x2F;p&gt;
+&lt;p&gt;You might wonder: “Why, then, publish it online?”&lt;&#x2F;p&gt;
+&lt;p&gt;I don’t know. Maybe it’s the responsibility that comes with having an audience, however small. Knowing that others might read my thoughts pushes me to articulate them more clearly and thoughtfully. It transforms a private reflection into a public dialogue, inviting feedback and connection. In a way, it’s a commitment to my own growth and accountability.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;span class=&quot;highlight-primary&quot;&gt;Commitment&lt;&#x2F;span&gt;. This is what I’m missing; hence, this is what I want to cultivate through this practice.&lt;&#x2F;p&gt;
+&lt;p&gt;Time to get to the meat of the matter. During one of the many periods of my life when I was journaling and documenting my daily struggles, I defined a specific template that I would follow to write this kind of quarterly reviews&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-1-1&quot;&gt;&lt;a href=&quot;#fn-1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;. It would include sections that called for actionable insights and reflections, or specific questions that would make it easier for me to fill it out.&lt;&#x2F;p&gt;
+&lt;p&gt;I’ve decided to go freely know. This doesn’t mean I will not follow a structure, but rather this will be kind of spontaneous and not optimized for some metric.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;q1&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#q1&quot; aria-label=&quot;Anchor link for: q1&quot;&gt;Q1&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Jan–Mar&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;triathlon coaching&lt;&#x2F;li&gt;
+&lt;li&gt;first proper submission&lt;&#x2F;li&gt;
+&lt;li&gt;mole removal -&amp;gt; missed running race&lt;&#x2F;li&gt;
+&lt;li&gt;birthday -&amp;gt; mom in munich&lt;&#x2F;li&gt;
+&lt;li&gt;naples+siena (strade bianche)&lt;&#x2F;li&gt;
+&lt;li&gt;lower back surgery&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;q2&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#q2&quot; aria-label=&quot;Anchor link for: q2&quot;&gt;Q2&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Apr–Jun&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;recovery post-surgery&lt;&#x2F;li&gt;
+&lt;li&gt;missed half-marathon&lt;&#x2F;li&gt;
+&lt;li&gt;kdd rebuttal&lt;&#x2F;li&gt;
+&lt;li&gt;back to sport&lt;&#x2F;li&gt;
+&lt;li&gt;foot bone aemathoma -&amp;gt; one week no running&lt;&#x2F;li&gt;
+&lt;li&gt;back to sport&lt;&#x2F;li&gt;
+&lt;li&gt;experimenting with calorie tracking&lt;&#x2F;li&gt;
+&lt;li&gt;neurips submission -&amp;gt; 4 papers&lt;&#x2F;li&gt;
+&lt;li&gt;trisuit test&lt;&#x2F;li&gt;
+&lt;li&gt;wedding denise’s cousin&lt;&#x2F;li&gt;
+&lt;li&gt;group retreat&lt;&#x2F;li&gt;
+&lt;li&gt;nova eroica&lt;&#x2F;li&gt;
+&lt;li&gt;vacation in tuscany&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;q3&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#q3&quot; aria-label=&quot;Anchor link for: q3&quot;&gt;Q3&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Jul–Sep&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;first triathlon race (sprint) -&amp;gt; 2nd overall (2nd cat)&lt;&#x2F;li&gt;
+&lt;li&gt;gastronenterologist -&amp;gt; new medication plan (big change)&lt;&#x2F;li&gt;
+&lt;li&gt;lot’s of orga work: gs funding, mentor, business trip orga&lt;&#x2F;li&gt;
+&lt;li&gt;neurips rebuttal&lt;&#x2F;li&gt;
+&lt;li&gt;toronto (kdd2025) -&amp;gt; connections (amazon, google, …), first trip alone outside of eu&lt;&#x2F;li&gt;
+&lt;li&gt;bormio cancelled -&amp;gt; tegernsee holiday&lt;&#x2F;li&gt;
+&lt;li&gt;second triathlon race (olympic) -&amp;gt; 6th overall (4th cat)&lt;&#x2F;li&gt;
+&lt;li&gt;wedding marten&lt;&#x2F;li&gt;
+&lt;li&gt;submission to workshop&lt;&#x2F;li&gt;
+&lt;li&gt;cv + website&lt;&#x2F;li&gt;
+&lt;li&gt;application for internships&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;fn-1&quot;&gt;
+&lt;p&gt;This is not properly a quarterly review, since Q1 and Q2 are missing. But the concept is the same. &lt;a href=&quot;#fr-1-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;section&gt;
 </content>
         
     </entry>

@@ -8,6 +8,7 @@ minify_html = true
 generate_feeds = true
 feed_filenames = ["atom.xml"]
 taxonomies = [{ name = "tags" }]
+default_language = "en"
 
 theme = "apollo"
 
@@ -19,15 +20,19 @@ highlight_themes_css = [
   { theme = "ayu-dark", filename = "syntax-theme-dark.css" },
   { theme = "ayu-light", filename = "syntax-theme-light.css" },
 ]
+render_emojis = false
+smart_punctuation = true
+bottom_footnotes = true
 
 
 [extra]
-theme = "toggle" # options: auto, toggle
+theme = "auto" # options: auto, toggle
 favicon = "/icons/favicon.ico"
 toc = true
 fancy_code = true
 mathjax = true
 mathjax_dollar_inline_enable = true
+
 
 # Font configuration
 # Options: "charter", "lora", "source-serif-pro", "crimson-text", "playfair-display", "merriweather", "system-serif", "zed" (original)
@@ -49,7 +54,8 @@ socials = [
 ]
 
 menu = [
-  { name = "/Papers", url = "/papers", weight = 1 },
-  { name = "/Posts", url = "/posts", weight = 2 },
-  { name = "/Contact", url = "/contact", weight = 3 },
+  { name = "/About", url = "/about", weight = 1 },
+  { name = "/Research", url = "/research", weight = 2 },
+  { name = "/Blog", url = "/blog", weight = 3 },
+  { name = "/Contact", url = "/contact", weight = 4 },
 ]

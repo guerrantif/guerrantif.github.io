@@ -1,3 +1,20 @@
+.back-to-section {
+    margin-bottom: 1rem;
+    font-size: 0.9em;
+
+    a {
+        color: var(--text-1);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.2s ease;
+
+        &:hover {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+    }
+}
+
 .primary-color {
   color: var(--primary-color);
 }
@@ -135,7 +152,6 @@ time {
       time {
           font-family: var(--mono-text-font);
           text-align: left;
-
           margin: 0;
       }
     }

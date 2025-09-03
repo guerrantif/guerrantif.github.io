@@ -11,6 +11,11 @@
 
     {% block post_list %}
         <main class="post-list">
+            {% if section.content %}
+                <div class="section-content">
+                    {{ section.content | safe }}
+                </div>
+            {% endif %}
             {%- if paginator %}
                 {%- set show_pages = paginator.pages -%}
             {% else %}

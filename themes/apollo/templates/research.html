@@ -122,6 +122,11 @@
     {{ post_macros::page_header(title=section.title) }}
 
     <main>
+        {% if section.content %}
+            <div class="section-content">
+                {{ section.content | markdown | safe }}
+            </div>
+        {% endif %}
         
         {% if publications_data.publications %}
             <div class="publications-list">
@@ -129,7 +134,7 @@
                 {% set selected_pubs = publications_data.publications | filter(attribute="selected") | sort(attribute="year") | reverse %}
                 {% if selected_pubs %}
                     <div class="section">
-                        <h1 class="section-header">selected</h1>
+                        <h2 class="section-header">selected</h2>
                         {% for pub in selected_pubs %}
                             {{ self::render_pub(pub=pub, publications_data=publications_data, selected=true) }}
                         {% endfor %}
@@ -138,7 +143,7 @@
                 
                 <!-- Rest Section -->
                 <div class="section">
-                    <h1 class="section-header">rest</h1>
+                    <h2 class="section-header">rest</h2>
                     {% for pub in publications_data.publications | sort(attribute="year") | reverse %}
                         {% if not pub.selected %}
                             {{ self::render_pub(pub=pub, publications_data=publications_data, selected=false) }}

@@ -4,36 +4,36 @@
         <loc>https://filippoguerranti.com/</loc>
     </url>
     <url>
+        <loc>https://filippoguerranti.com/about/</loc>
+    </url>
+    <url>
+        <loc>https://filippoguerranti.com/blog/</loc>
+    </url>
+    <url>
+        <loc>https://filippoguerranti.com/blog/hello-world/</loc>
+        <lastmod>2025-09-03</lastmod>
+    </url>
+    <url>
+        <loc>https://filippoguerranti.com/blog/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://filippoguerranti.com/blog/review-2025-q1-q2-q3/</loc>
+        <lastmod>2025-09-02</lastmod>
+    </url>
+    <url>
         <loc>https://filippoguerranti.com/contact/</loc>
     </url>
     <url>
-        <loc>https://filippoguerranti.com/papers/</loc>
-    </url>
-    <url>
-        <loc>https://filippoguerranti.com/posts/</loc>
-    </url>
-    <url>
-        <loc>https://filippoguerranti.com/posts/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://filippoguerranti.com/posts/please-slow-down/</loc>
-        <lastmod>2025-09-02</lastmod>
-    </url>
-    <url>
-        <loc>https://filippoguerranti.com/posts/review-2025-q1-q2-q3/</loc>
-        <lastmod>2025-09-02</lastmod>
-    </url>
-    <url>
         <loc>https://filippoguerranti.com/projects/</loc>
+    </url>
+    <url>
+        <loc>https://filippoguerranti.com/research/</loc>
     </url>
     <url>
         <loc>https://filippoguerranti.com/tags/</loc>
     </url>
     <url>
         <loc>https://filippoguerranti.com/tags/2025/</loc>
-    </url>
-    <url>
-        <loc>https://filippoguerranti.com/tags/minimalism/</loc>
     </url>
     <url>
         <loc>https://filippoguerranti.com/tags/q1/</loc>
@@ -48,6 +48,6 @@
         <loc>https://filippoguerranti.com/tags/quarterly/</loc>
     </url>
     <url>
-        <loc>https://filippoguerranti.com/tags/review/</loc>
+        <loc>https://filippoguerranti.com/tags/retrospective/</loc>
     </url>
 </urlset>

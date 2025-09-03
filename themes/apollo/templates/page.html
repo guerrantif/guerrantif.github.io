@@ -76,6 +76,12 @@
             <section class="body">
                 {{ page.content | safe }}
             </section>
+            
+            {% if page.relative_path is starting_with("blog/") %}
+                <div class="back-to-section">
+                    <a href="{{ get_url(path='@/blog/_index.md') | safe }}">← Back to Blog</a>
+                </div>
+            {% endif %}
         </article>
     </main>
 </div>
