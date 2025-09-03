@@ -1,6 +1,6 @@
 base_url = "https://filippoguerranti.com"
 title = "Filippo Guerranti"
-description = "Filippo Guerranti's personal website"
+description = "PhD researcher in machine learning for graphs and structured data. Research publications, blog posts, and academic projects."
 author = "Filippo Guerranti"
 compile_sass = true
 build_search_index = false
