@@ -66,6 +66,12 @@
 
     {# Favicon #}
     {% if config.extra.favicon %}<link rel="icon" type="image/png" href={{ get_url(path=config.extra.favicon) }} />{% endif %}
+    
+    {# Font preloading for Charter when using system fonts #}
+    {% if config.extra.font_family == "charter" %}
+        <link rel="preload" href="/fonts/charter/charter-regular.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/fonts/charter/charter-bold.woff2" as="font" type="font/woff2" crossorigin>
+    {% endif %}
 
     {# Font from cdn or disk #}
     {% if config.extra.use_cdn | default(value=false) %}
@@ -308,4 +314,7 @@
         <script defer
                 src="{{ get_url(path='js/searchElasticlunr.min.js', cachebust=true) | safe }}"></script>
     {%- endif -%}
+
+    {# Mobile menu functionality #}
+    <script defer src="{{ get_url(path='js/main.js') }}"></script>
 </head>

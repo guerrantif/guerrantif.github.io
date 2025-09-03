@@ -1,1 +1,1 @@
-:root.dark{--text-0: #f0f0f0;--text-1: #c5c5c5;--text-2: #929292;--bg-0: #121212;--bg-1: #1f1f1f;--bg-2: #383838;--border-color: var(--bg-2);--hover-color: white}:root.dark .social>img,:root.dark .search-button>img,:root.dark .logo>img{filter:invert(1)}
+:root.dark{--text-0: #f0f0f0;--text-1: #b0b0b0;--text-2: #929292;--bg-0: #121212;--bg-1: #1f1f1f;--bg-2: #383838;--border-color: var(--bg-2);--hover-color: white}:root.dark .social>img,:root.dark .search-button>img,:root.dark .logo>img,:root.dark .mobile-menu-toggle>img{filter:invert(1)}

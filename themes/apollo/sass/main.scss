@@ -39,22 +39,28 @@ html {
   line-height: var(--line-height);
   overflow-y: scroll; // solves the annoying scrollbar issue
   
-  // Smooth responsive font scaling using clamp()
-  font-size: clamp(calc(var(--font-size-base) * 1.08), calc(var(--font-size-base) + (100vw - 320px) * -0.08 / (992 - 320)), var(--font-size-base));
+  // Simplified responsive font scaling without jumps
+  font-size: clamp(14px, 1rem + 0.25vw, 16px);
 }
 
 body {
   display: flex;
   flex-grow: 1;
+  flex-direction: column;
   padding: 0.9rem;
-  padding-bottom: 1.5rem;
-  margin-bottom: 1.5rem;
-  min-height: calc(100vh - 150px);
+  padding-bottom: 0;
+  margin-bottom: 0;
+  min-height: calc(100vh - 1rem);
 
-  @media (min-width: 992px) {
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+  .body-content {
+    display: flex;
+    flex-grow: 1;
+
+    @media (min-width: 992px) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+    }
   }
 
   .content {
@@ -93,6 +99,27 @@ body {
     }
 
 
+  }
+}
+
+footer {
+  margin-top: auto;
+  padding: 0.5rem 0.9rem;
+  margin-bottom: 0.5rem;
+  border-top: 1px solid rgba(128, 128, 128, 0.2);
+  
+  .footer-content {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.75em;
+    color: var(--text-2);
+    opacity: 0.8;
+    
+    p {
+      margin: 0;
+    }
+    
   }
 }
 

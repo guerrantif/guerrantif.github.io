@@ -2,15 +2,20 @@
     margin-bottom: 1rem;
     font-size: 0.9em;
 
-    a {
-        color: var(--text-1);
-        text-decoration: none;
-        border-bottom: 1px solid transparent;
-        transition: all 0.2s ease;
+    .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5em;
+        
+        svg {
+            width: 1em;
+            height: 1em;
+            fill: currentColor;
+            transition: fill 0.2s ease;
+        }
 
-        &:hover {
-            color: var(--primary-color);
-            border-bottom-color: var(--primary-color);
+        &:hover svg {
+            fill: var(--primary-color);
         }
     }
 }
@@ -84,7 +89,7 @@ a {
 }
 
 /* Only have colored links inside the text */
-main {
+main, footer {
   a {
       border-bottom: 1px solid var(--primary-color);
 
@@ -127,10 +132,10 @@ time {
       display: grid;
       align-items: center;
 
-      @media all and (max-width: 640px) {
+      @media all and (max-width: 480px) {
           grid-template-rows: auto 1fr;
       }
-      @media all and (min-width: 640px) {
+      @media all and (min-width: 480px) {
           grid-template-columns: auto 1fr;
           gap: 1rem;
       }

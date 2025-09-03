@@ -15,25 +15,41 @@
         <div class="socials">
             {% for social in config.extra.socials %}
                 <a rel="me" href="{{ social.url }}" class="social">
-                    <img alt="{{ social.name }}" src="{{ get_url(path="icons/social/" ~ social.icon ~ ".svg") }}">
+                    {% set icon_path = "themes/apollo/static/icons/social/" ~ social.icon ~ ".svg" %}
+                    {% set icon_svg = load_data(path=icon_path, format="plain") %}
+                    {{ icon_svg | replace(from='fill="#000000"', to='fill="currentColor"') | replace(from='fill="rgb(0%, 0%, 0%)"', to='fill="currentColor"') | replace(from='fill="black"', to='fill="currentColor"') | safe }}
                 </a>
             {% endfor %}
         </div>
     </div>
 
     <div class="right-nav">
-        {% for menu in config.extra.menu %}
-            <a href={{ get_url(path=menu.url) }} style="margin-right: 0.5em">{{ menu.name }}</a>
-        {% endfor %}
+        <!-- Hamburger menu button for mobile -->
+        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+            <span class="hamburger-icon">
+                {% set hamburger_svg = load_data(path="static/icons/hamburger.svg", format="plain") %}
+                {{ hamburger_svg | replace(from='fill="#000000"', to='fill="currentColor"') | replace(from='fill="rgb(0%, 0%, 0%)"', to='fill="currentColor"') | replace(from='fill="black"', to='fill="currentColor"') | replace(from='fill="#000"', to='fill="currentColor"') | replace(from='fill="currentColor"', to='fill="currentColor"') | safe }}
+            </span>
+            <span class="cross-icon">
+                {% set cross_svg = load_data(path="static/icons/cross.svg", format="plain") %}
+                {{ cross_svg | replace(from='fill="#000000"', to='fill="currentColor"') | replace(from='fill="rgb(0%, 0%, 0%)"', to='fill="currentColor"') | replace(from='fill="black"', to='fill="currentColor"') | replace(from='fill="#000"', to='fill="currentColor"') | replace(from='fill="currentColor"', to='fill="currentColor"') | safe }}
+            </span>
+        </button>
+        
+        <!-- Navigation items -->
+        <div class="nav-items">
+            {% for menu in config.extra.menu %}
+                <a href={{ get_url(path=menu.url) }} class="nav-link">{{ menu.name }}</a>
+            {% endfor %}
 
-        {% if config.build_search_index %}
-            <button id="search-button"
-                    class="search-button"
-                    title="$SHORTCUT to open search">
-                <img src="{{ get_url(path='icons/search.svg') }}"
-                    alt="Search"
-                    class="search-icon">
-            </button>
+            {% if config.build_search_index %}
+                <button id="search-button"
+                        class="search-button"
+                        title="$SHORTCUT to open search">
+                    <img src="{{ get_url(path='icons/search.svg') }}"
+                        alt="Search"
+                        class="search-icon">
+                </button>
 
             <div id="searchModal"
                 class="search-modal js"
@@ -67,19 +83,23 @@
             </div>
         {% endif %}
 
-        {% if config.extra.theme == "toggle" %}
-            <a id="dark-mode-toggle"
-            onclick="toggleTheme(); event.preventDefault();"
-            href="#">
-                <img src="{{ get_url(path="icons/sun.svg") }}"
-                    id="sun-icon"
-                    style="filter: invert(1)"
-                    alt="Light" />
-                <img src={{ get_url(path="icons/moon.svg") }} id="moon-icon" alt="Dark" />
-            </a>
+            {% if config.extra.theme == "toggle" %}
+                <a id="dark-mode-toggle"
+                onclick="toggleTheme(); event.preventDefault();"
+                href="#">
+                    <span id="sun-icon">
+                        {% set sun_svg = load_data(path="themes/apollo/static/icons/sun.svg", format="plain") %}
+                        {{ sun_svg | replace(from='fill="#000000"', to='fill="currentColor"') | replace(from='fill="rgb(0%, 0%, 0%)"', to='fill="currentColor"') | replace(from='fill="black"', to='fill="currentColor"') | replace(from='fill="#000"', to='fill="currentColor"') | safe }}
+                    </span>
+                    <span id="moon-icon">
+                        {% set moon_svg = load_data(path="themes/apollo/static/icons/moon.svg", format="plain") %}
+                        {{ moon_svg | replace(from='fill="#000000"', to='fill="currentColor"') | replace(from='fill="rgb(0%, 0%, 0%)"', to='fill="currentColor"') | replace(from='fill="black"', to='fill="currentColor"') | replace(from='fill="#000"', to='fill="currentColor"') | safe }}
+                    </span>
+                </a>
 
-            <!-- Initialize the theme toggle icons -->
-            <script>updateItemToggleTheme()</script>
-        {% endif %}
+                <!-- Initialize the theme toggle icons -->
+                <script>updateItemToggleTheme()</script>
+            {% endif %}
+        </div>
     </div>
 </nav>

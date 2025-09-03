@@ -6,35 +6,45 @@
     {% include "partials/header.html" %}
 
     <body>
-        <div class="left-content">
-            {% block left_content %}
-            {% endblock left_content %}
+        <div class="body-content">
+            <div class="left-content">
+                {% block left_content %}
+                {% endblock left_content %}
+            </div>
+
+            <div class="content">
+                {% include "partials/nav.html" %}
+
+                {# Post page is the default #}
+                {% block main_content %}
+                    Nothing here?!
+                {% endblock main_content %}
+
+                {% if page.extra.comment is defined %}
+                    {% set show_comment = page.extra.comment %}
+                {% else %}
+                    {% set show_comment = false %}
+                {% endif %}
+
+                {% if show_comment %}
+                    <div class="giscus"></div>
+                    {% include "_giscus_script.html" %}
+                {% endif %}
+            </div>
+
+            <div class="right-content">
+                {% block right_content %}
+                {% endblock right_content %}
+            </div>
         </div>
 
-        <div class="content">
-            {% include "partials/nav.html" %}
-
-            {# Post page is the default #}
-            {% block main_content %}
-                Nothing here?!
-            {% endblock main_content %}
-
-            {% if page.extra.comment is defined %}
-                {% set show_comment = page.extra.comment %}
-            {% else %}
-                {% set show_comment = false %}
-            {% endif %}
-
-            {% if show_comment %}
-                <div class="giscus"></div>
-                {% include "_giscus_script.html" %}
-            {% endif %}
-        </div>
-
-        <div class="right-content">
-            {% block right_content %}
-            {% endblock right_content %}
-        </div>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; {{ now() | date(format="%Y") }} Filippo Guerranti. All rights reserved. 
+                    <!-- Built with <a href="https://www.getzola.org/" target="_blank">Zola</a> and <a href="https://github.com/not-matthias/apollo" target="_blank">Apollo</a> -->
+                </p>
+            </div>
+        </footer>
     </body>
 
 </html>

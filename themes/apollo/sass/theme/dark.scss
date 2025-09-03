@@ -5,7 +5,7 @@ $bg-1: lighten($bg-0, 5%);
 $bg-2: lighten($bg-1, 10%);
 
 $text-0: lighten($bg-0, 87%);
-$text-1: lighten($bg-0, 70%);
+$text-1: lighten($bg-0, 62%);
 $text-2: lighten($bg-0, 50%);
 
 :root.dark {
@@ -21,7 +21,7 @@ $text-2: lighten($bg-0, 50%);
 
   --hover-color: white;
 
-  .social > img, .search-button > img, .logo > img {
+  .social > img, .search-button > img, .logo > img, .mobile-menu-toggle > img {
     filter: invert(1);
   }
 }

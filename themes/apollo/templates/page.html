@@ -79,7 +79,10 @@
             
             {% if page.relative_path is starting_with("blog/") %}
                 <div class="back-to-section">
-                    <a href="{{ get_url(path='@/blog/_index.md') | safe }}">← Back to Blog</a>
+                    <a href="{{ get_url(path='@/blog/_index.md') | safe }}" class="back-link">
+                        {% set arrow_svg = load_data(path="static/icons/left-arrow.svg", format="plain") %}
+                        {{ arrow_svg | replace(from='fill="#000000"', to='fill="currentColor"') | replace(from='fill="rgb(0%, 0%, 0%)"', to='fill="currentColor"') | replace(from='fill="black"', to='fill="currentColor"') | replace(from='fill="#000"', to='fill="currentColor"') | safe }} Back to Blog
+                    </a>
                 </div>
             {% endif %}
         </article>
