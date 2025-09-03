@@ -40,15 +40,17 @@ jobs:
 
       - name: Compress static assets
         run: |
+          echo "Creating compressed versions alongside originals for GitHub Pages"
           # Find and compress CSS, JS, HTML, SVG, and other text files
           find ./public -type f \( -name "*.css" -o -name "*.js" -o -name "*.html" -o -name "*.svg" -o -name "*.json" -o -name "*.xml" -o -name "*.txt" \) | while read file; do
+            # Create .gz version alongside original (GitHub Pages will serve .gz if available)
             gzip -9 -c "$file" > "$file.gz"
-            # Replace original with compressed version and add proper headers
-            mv "$file.gz" "$file"
           done
           
           echo "Compression complete. File sizes:"
           find ./public -type f -name "*.css" -o -name "*.js" -o -name "*.html" | head -5 | xargs ls -lh
+          echo "Compressed versions:"
+          find ./public -name "*.gz" | head -5 | xargs ls -lh
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
