@@ -13,13 +13,15 @@
 @import "parts/_publications.scss";
 @import "parts/_homepage.scss";
 @import "parts/_lists.scss";
+@import "theme/light.scss";
+@import "theme/dark.scss";
 
 :root {
   /* Used for: block comment, hr, ... */
   --border-color: var(--border-color);
 
   /* Fonts */
-  --font-size-base: 13.5px;
+  --font-size-base: 15px;
   --mono-text-font: "Jetbrains Mono";
   // Font variables - these will be overridden by the template based on config
   --text-font: "Lora", Georgia, serif;
@@ -36,16 +38,9 @@ html {
   font-family: var(--text-font);
   line-height: var(--line-height);
   overflow-y: scroll; // solves the annoying scrollbar issue
-
-  @media (max-width: 992px) {
-    font-size: calc(var(--font-size-base) * 1.02);
-  }
-  @media (max-width: 768px) {
-    font-size: calc(var(--font-size-base) * 1.05);
-  }
-  @media (max-width: 576px) {
-    font-size: calc(var(--font-size-base) * 1.08);
-  }
+  
+  // Smooth responsive font scaling using clamp()
+  font-size: clamp(calc(var(--font-size-base) * 1.08), calc(var(--font-size-base) + (100vw - 320px) * -0.08 / (992 - 320)), var(--font-size-base));
 }
 
 body {

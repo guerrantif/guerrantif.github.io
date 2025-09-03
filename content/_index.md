@@ -4,7 +4,6 @@ template = "homepage.html"
 
 [extra]
 subtitle = "PhD researcher in machine learning for graphs and structured data"
-description = "Originally from [IT], currently in [DE]"
 +++
 
 Welcome to my personal corner of the internet.

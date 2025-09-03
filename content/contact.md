@@ -19,6 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-## Social Media
+## Social media
 
 You can also find me on the social platforms linked in the navigation bar above.
