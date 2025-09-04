@@ -14,7 +14,7 @@
 
         <div class="socials">
             {% for social in config.extra.socials %}
-                <a rel="me" href="{{ social.url }}" class="social">
+                <a href="{{ social.url }}" class="social" rel="me noopener noreferrer" target="_blank">
                     {% set icon_path = "themes/apollo/static/icons/social/" ~ social.icon ~ ".svg" %}
                     {% set icon_svg = load_data(path=icon_path, format="plain") %}
                     {{ icon_svg | replace(from='fill="#000000"', to='fill="currentColor"') | replace(from='fill="rgb(0%, 0%, 0%)"', to='fill="currentColor"') | replace(from='fill="black"', to='fill="currentColor"') | safe }}

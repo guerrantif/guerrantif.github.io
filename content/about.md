@@ -1,5 +1,7 @@
 +++
 title = "About"
+[extra]
+toc = false
 +++
 
 Welcome to my personal corner of the internet. Here you can find out more about me, my work, and my interests.

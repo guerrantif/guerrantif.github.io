@@ -1,5 +1,7 @@
 +++
 title = "Contact"
+[extra]
+toc = false
 +++
 
 For research collaborations, questions about my work, or general interesting discussions, feel free to reach out:

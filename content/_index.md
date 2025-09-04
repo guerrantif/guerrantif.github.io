@@ -5,6 +5,7 @@ description = "PhD researcher in machine learning for graphs and structured data
 
 [extra]
 subtitle = "PhD researcher in machine learning for graphs and structured data"
+toc = false
 +++
 
 
