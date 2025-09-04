@@ -155,7 +155,20 @@
         :root .highlight code,
         :root input[type="url"], 
         :root input[type="email"],
-        :root .search-input {
+        :root .search-input,
+        :root pre *,
+        :root code *,
+        :root .z-code *,
+        :root [class*="language-"] *,
+        :root [data-lang] *,
+        :root .MathJax,
+        :root .MathJax *,
+        :root mjx-container,
+        :root mjx-container *,
+        :root math,
+        :root math *,
+        :root .preserve-case,
+        :root .preserve-case * {
             text-transform: none !important;
         }
         {% endif %}

@@ -10,6 +10,10 @@
         <loc>https://filippoguerranti.com/blog/</loc>
     </url>
     <url>
+        <loc>https://filippoguerranti.com/blog/creatine/</loc>
+        <lastmod>2025-09-04</lastmod>
+    </url>
+    <url>
         <loc>https://filippoguerranti.com/blog/hello-world/</loc>
         <lastmod>2025-09-03</lastmod>
     </url>
@@ -36,6 +40,15 @@
         <loc>https://filippoguerranti.com/tags/2025/</loc>
     </url>
     <url>
+        <loc>https://filippoguerranti.com/tags/creatine/</loc>
+    </url>
+    <url>
+        <loc>https://filippoguerranti.com/tags/fitness/</loc>
+    </url>
+    <url>
+        <loc>https://filippoguerranti.com/tags/health/</loc>
+    </url>
+    <url>
         <loc>https://filippoguerranti.com/tags/q1/</loc>
     </url>
     <url>
@@ -49,5 +62,8 @@
     </url>
     <url>
         <loc>https://filippoguerranti.com/tags/retrospective/</loc>
+    </url>
+    <url>
+        <loc>https://filippoguerranti.com/tags/supplements/</loc>
     </url>
 </urlset>
