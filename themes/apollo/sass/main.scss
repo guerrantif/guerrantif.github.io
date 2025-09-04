@@ -28,7 +28,7 @@
   --header-font: "Lora", Georgia, serif;
   --code-font: "Jetbrains Mono";
 
-  --line-height: 1.3;
+  --line-height: 1.5;
   --page-width: 920px;
 }
 
@@ -123,3 +123,17 @@ footer {
   }
 }
 
+.footnotes{
+  font-size: 0.75em;
+  color: var(--text-1);
+  opacity: 0.8;
+
+  p {
+    margin: 0;
+  }
+
+  // make first of list item bold
+  li:first-child {
+    margin-top: 5em;
+  }
+}
