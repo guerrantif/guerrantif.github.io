@@ -1,11 +1,12 @@
 // Homepage styling using Apollo theme variables and SCSS features
 .homepage-hero {
     text-align: center;
-    padding: 2rem 0;
+    padding: 0 0 2rem 0;
+    margin: 4rem 0 0 0;
 
     .homepage-hero-title {
         font-size: 2.4rem;
-        margin-bottom: 1rem;
+        margin: 0 0 1rem 0;
     }
 
     .homepage-hero-subtitle {

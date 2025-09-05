@@ -40,7 +40,7 @@ nav {
       flex-direction: row;
       align-items: center;
       gap: 0.75em;
-      font-size: 1.25em;
+      font-size: 1.15em;
 
       .socials {
         /* flex-container */
@@ -52,8 +52,8 @@ nav {
         gap: 0.2em;
 
         .social svg {
-          width: 1em;
-          height: 1em;
+          width: 1.1em;
+          height: 1.1em;
           fill: currentColor;
           // transition: fill 0.2s ease;
 
@@ -102,6 +102,7 @@ nav {
         flex-wrap: wrap;
         align-items: center;
         position: relative;
+        font-size: 1.15em;
 
         /* Mobile hamburger menu */
         .mobile-menu-toggle {
@@ -116,8 +117,8 @@ nav {
                 display: block;
                 
                 svg {
-                    width: 2.2em;
-                    height: 2.2em;
+                    width: 2.4em;
+                    height: 2.4em;
                     display: block;
                     fill: var(--text-0) !important;
                     transition: fill 0.2s ease;
@@ -187,8 +188,8 @@ nav {
                 }
 
                 .search-icon {
-                    width: 1em;
-                    height: 1em;
+                    width: 1.1em;
+                    height: 1.1em;
                 }
             }
 
@@ -241,8 +242,8 @@ nav {
                     }
 
                     img {
-                        width: 1em;
-                        height: 1em;
+                        width: 1.1em;
+                        height: 1.1em;
                     }
                 }
             }
@@ -254,13 +255,13 @@ nav {
             align-self: center;
 
             > img {
-                width: 1em;
-                height: 1em;
+                width: 1.1em;
+                height: 1.1em;
             }
 
             svg {
-                width: 1em;
-                height: 1em;
+                width: 1.1em;
+                height: 1.1em;
                 fill: var(--text-0);
                 stroke: var(--text-0);
                 vertical-align: text-bottom;

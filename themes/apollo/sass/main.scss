@@ -21,7 +21,7 @@
   --border-color: var(--border-color);
 
   /* Fonts */
-  --font-size-base: 15px;
+  --font-size-base: 20px;
   --mono-text-font: "Jetbrains Mono";
   // Font variables - these will be overridden by the template based on config
   --text-font: "Lora", Georgia, serif;
@@ -40,7 +40,7 @@ html {
   overflow-y: scroll; // solves the annoying scrollbar issue
   
   // Simplified responsive font scaling without jumps
-  font-size: clamp(14px, 1rem + 0.25vw, 16px);
+  font-size: clamp(16px, 1.2rem + 0.4vw, 20px);
 }
 
 body {

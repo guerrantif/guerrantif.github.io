@@ -40,7 +40,7 @@ font_family = "charter"
 
 # Primary color configuration
 # Set custom primary colors for light and dark themes
-primary_color_light = "#4f46e5"  # Indigo for better contrast on light theme
+primary_color_light = "#3e8be9ff"  # Indigo for better contrast on light theme
 primary_color_dark = "#60a5fa"   # Lighter blue for dark theme
 
 # Case configuration
