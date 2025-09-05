@@ -37,10 +37,12 @@ mathjax_dollar_inline_enable = true
 # Font configuration
 # Options: "charter", "lora", "source-serif-pro", "crimson-text", "playfair-display", "merriweather", "system-serif", "zed" (original)
 font_family = "charter"
+# Base font size in pixels - controls overall site text size (default: 16)
+base_font_size = "16"
 
 # Primary color configuration
 # Set custom primary colors for light and dark themes
-primary_color_light = "#3e8be9ff"  # Indigo for better contrast on light theme
+primary_color_light = "#60a5fa"  # Indigo for better contrast on light theme
 primary_color_dark = "#60a5fa"   # Lighter blue for dark theme
 
 # Case configuration

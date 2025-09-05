@@ -1,10 +1,11 @@
 +++
 title = "Contact"
+description = "Contact Filippo Guerranti for research collaborations, questions about machine learning and graph neural networks, or professional discussions. Get in touch via email or social media."
 [extra]
 toc = false
 +++
 
-For research collaborations, questions about my work, or general interesting discussions, feel free to reach out:
+I’m happy to hear from anyone interested in research collaborations, questions about my work, or discussions on related topics. To help me respond effectively, it’s useful if messages are brief and focused on topics related to my research or professional interests. I try to reply within a week, though it may take a little longer at busy times.
 
 ## Email
 
@@ -23,4 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ## Social media
 
-You can also find me on the social platforms linked in the navigation bar above.
+You can also connect with me via the social media links in the navigation bar above. I’m most active on platforms relevant to research and professional discussion.
+
+## RSS 
+
+Feel free to subscribe to my [RSS feed](/atom.xml) for updates on new blog posts and research publications.

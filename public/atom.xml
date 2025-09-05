@@ -2,32 +2,58 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Filippo Guerranti</title>
     <subtitle>PhD researcher in machine learning for graphs and structured data. Research publications, blog posts, and academic projects.</subtitle>
+    
     <link rel="self" type="application/atom+xml" href="https://filippoguerranti.com/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://filippoguerranti.com"/>
+    
     <generator uri="https://www.getzola.org/">Zola</generator>
+    <language>en</language>
+    
     <updated>2025-09-03T00:00:00+00:00</updated>
     <id>https://filippoguerranti.com/atom.xml</id>
+    
+    <!-- Feed metadata -->
+    <rights>© 2025 Filippo Guerranti</rights>
+    <category term="machine-learning" label="Machine Learning"/>
+    <category term="research" label="Research"/>
+    <category term="graphs" label="Graph Neural Networks"/>
+    <category term="phd" label="PhD Research"/>
+    
+    <author>
+        <name>Filippo Guerranti</name>
+        <uri>https:&#x2F;&#x2F;filippoguerranti.com</uri>
+    </author>
     <entry xml:lang="en">
         <title>Hello, World!</title>
         <published>2025-09-03T00:00:00+00:00</published>
         <updated>2025-09-03T00:00:00+00:00</updated>
-        
         <author>
-          <name>
+            <name>
             
-              Filippo Guerranti
+                Filippo Guerranti
             
-          </name>
+            </name>
+            <uri>https:&#x2F;&#x2F;filippoguerranti.com</uri>
         </author>
+        
         
         <link rel="alternate" type="text/html" href="https://filippoguerranti.com/blog/hello-world/"/>
         <id>https://filippoguerranti.com/blog/hello-world/</id>
         
-        <content type="html" xml:base="https://filippoguerranti.com/blog/hello-world/">&lt;pre data-lang=&quot;python&quot; class=&quot;language-python z-code&quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;z-source z-python&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-python&quot;&gt;&lt;span class=&quot;z-meta z-qualified-name z-python&quot;&gt;&lt;span class=&quot;z-variable z-function z-python&quot;&gt;&lt;span class=&quot;z-support z-function z-builtin z-python&quot;&gt;print&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-python&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-arguments z-begin z-python&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-string z-python&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-python&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-python&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-string z-python&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-python&quot;&gt;Hello, World!&lt;span class=&quot;z-punctuation z-definition z-string z-end z-python&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-section z-arguments z-end z-python&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
-&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;First blog post on this website.&lt;&#x2F;p&gt;
-&lt;p&gt;In case you are interested to know something more about me or this website, the &lt;a href=&quot;..&#x2F;..&#x2F;about&#x2F;&quot;&gt;About&lt;&#x2F;a&gt; page is a good starting point.&lt;&#x2F;p&gt;
-</content>
+        <!-- Add categories/tags if available -->
+        
+        <!-- Enhanced content with reading time and word count -->
+        <content type="html" xml:base="https://filippoguerranti.com/blog/hello-world/">
+            &lt;p&gt;&lt;em&gt;Reading time: 1 min • 29 words&lt;/em&gt;&lt;/p&gt;
+            
+            &lt;pre data-lang=&quot;python&quot; class=&quot;language-python z-code&quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;z-source z-python&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-python&quot;&gt;&lt;span class=&quot;z-meta z-qualified-name z-python&quot;&gt;&lt;span class=&quot;z-variable z-function z-python&quot;&gt;&lt;span class=&quot;z-support z-function z-builtin z-python&quot;&gt;print&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-python&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-arguments z-begin z-python&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;z-meta z-string z-python&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-python&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-python&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;z-meta z-string z-python&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-python&quot;&gt;Hello, World!&lt;span class=&quot;z-punctuation z-definition z-string z-end z-python&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;z-punctuation z-section z-arguments z-end z-python&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;First blog post on this website.&lt;/p&gt;
+&lt;p&gt;In case you are interested to know something more about me or this website, the &lt;a href=&quot;../../about/&quot;&gt;About&lt;/a&gt; page is a good starting point.&lt;/p&gt;
+
+            
+            &lt;p&gt;&lt;a href="https://filippoguerranti.com/blog/hello-world/"&gt;Read more on the website →&lt;/a&gt;&lt;/p&gt;
+        </content>
         
     </entry>
 </feed>

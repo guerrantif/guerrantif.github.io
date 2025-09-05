@@ -14,7 +14,7 @@
 
         <div class="socials">
             {% for social in config.extra.socials %}
-                <a href="{{ social.url }}" class="social" rel="me noopener noreferrer" target="_blank">
+                <a href="{{ social.url }}" class="social" rel="me noopener noreferrer" target="_blank" aria-label="{{ social.name }} profile">
                     {% set icon_path = "themes/apollo/static/icons/social/" ~ social.icon ~ ".svg" %}
                     {% set icon_svg = load_data(path=icon_path, format="plain") %}
                     {{ icon_svg | replace(from='fill="#000000"', to='fill="currentColor"') | replace(from='fill="rgb(0%, 0%, 0%)"', to='fill="currentColor"') | replace(from='fill="black"', to='fill="currentColor"') | safe }}
@@ -84,18 +84,19 @@
         {% endif %}
 
             {% if config.extra.theme == "toggle" %}
-                <a id="dark-mode-toggle"
+                <button id="dark-mode-toggle"
                 onclick="toggleTheme(); event.preventDefault();"
-                href="#">
-                    <span id="sun-icon">
+                aria-label="Toggle dark mode"
+                title="Toggle dark mode">
+                    <span id="sun-icon" aria-hidden="true">
                         {% set sun_svg = load_data(path="themes/apollo/static/icons/sun.svg", format="plain") %}
                         {{ sun_svg | replace(from='fill="#000000"', to='fill="currentColor"') | replace(from='fill="rgb(0%, 0%, 0%)"', to='fill="currentColor"') | replace(from='fill="black"', to='fill="currentColor"') | replace(from='fill="#000"', to='fill="currentColor"') | safe }}
                     </span>
-                    <span id="moon-icon">
+                    <span id="moon-icon" aria-hidden="true">
                         {% set moon_svg = load_data(path="themes/apollo/static/icons/moon.svg", format="plain") %}
                         {{ moon_svg | replace(from='fill="#000000"', to='fill="currentColor"') | replace(from='fill="rgb(0%, 0%, 0%)"', to='fill="currentColor"') | replace(from='fill="black"', to='fill="currentColor"') | replace(from='fill="#000"', to='fill="currentColor"') | safe }}
                     </span>
-                </a>
+                </button>
 
                 <!-- Initialize the theme toggle icons -->
                 <script>updateItemToggleTheme()</script>

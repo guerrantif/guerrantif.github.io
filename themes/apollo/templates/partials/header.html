@@ -64,36 +64,90 @@
         {% endif %}
     {% endif %}
 
-    {# Favicon #}
-    {% if config.extra.favicon %}<link rel="icon" type="image/png" href={{ get_url(path=config.extra.favicon) }} />{% endif %}
+    {# Enhanced OpenGraph and X (Twitter) Card meta tags #}
+    <meta property="og:type" content="{% if page %}article{% else %}website{% endif %}" />
+    <meta property="og:site_name" content="{{ config.title }}" />
+    <meta property="og:url" content="{% if page %}{{ page.permalink }}{% elif section %}{{ section.permalink }}{% else %}{{ config.base_url }}{% endif %}" />
     
-    {# Font preloading for Charter when using system fonts #}
-    {% if config.extra.font_family == "charter" %}
-        <link rel="preload" href="/fonts/charter/charter-regular.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="/fonts/charter/charter-bold.woff2" as="font" type="font/woff2" crossorigin>
+    {% if page and page.date %}
+        <meta property="article:published_time" content="{{ page.date | date(format='%Y-%m-%dT%H:%M:%S%:z') }}" />
+        <meta property="article:author" content="{{ config.author | default(value='Filippo Guerranti') }}" />
     {% endif %}
+    
+    {# X (Twitter) Card meta tags #}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{% if current_path == '/' %}{{ post_macros::site_title() }}{% else %}{% if page.title %}{{ page.title }}{% elif section.title %}{{ section.title }}{% else %}{{ config.title }}{% endif %}{% endif %}" />
+    {% if page.description %}
+        <meta name="twitter:description" content="{{ page.description }}" />
+    {% elif config.description %}
+        <meta name="twitter:description" content="{{ config.description }}" />
+    {% endif %}
+    
+    {# Add image for social sharing - can be customized per page #}
+    {% if page.extra.image %}
+        <meta property="og:image" content="{{ config.base_url ~ page.extra.image }}" />
+        <meta name="twitter:image" content="{{ config.base_url ~ page.extra.image }}" />
+    {% elif config.extra.social_image %}
+        <meta property="og:image" content="{{ config.base_url ~ config.extra.social_image }}" />
+        <meta name="twitter:image" content="{{ config.base_url ~ config.extra.social_image }}" />
+    {% endif %}
+
+    {# Enhanced Favicon #}
+    {% if config.extra.favicon %}
+        <link rel="icon" type="image/svg+xml" href="{{ get_url(path='icons/favicon.svg') }}" />
+        <link rel="icon" type="image/x-icon" href="{{ get_url(path=config.extra.favicon) }}" />
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path='icons/favicon.svg') }}" />
+    {% endif %}
+    
+    {# Performance optimizations - DNS prefetch and preconnect #}
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="//scholar.google.com">
+    <link rel="preconnect" href="{{ config.base_url }}" crossorigin>
+
+    {# Font preloading - Charter uses system fonts, no preloading needed #}
+    
+    {# Preload critical CSS #}
+    <link rel="preload" href="{{ get_url(path='main.css') }}" as="style"
+          onload="this.onload=null;this.rel='stylesheet'">
 
     {# Font from cdn or disk #}
     {% if config.extra.use_cdn | default(value=false) %}
         <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
         <link rel="stylesheet"
-              href="https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.min.css">
+              href="https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.min.css"
+              media="print" onload="this.media='all'">
         <link rel="stylesheet"
-              href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@4.5.8/index.min.css">
+              href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@4.5.8/index.min.css"
+              media="print" onload="this.media='all'">
         
-        {# Dynamic font loading based on config #}
+        {# Dynamic font loading based on config with async loading #}
         {% set font_family = config.extra.font_family | default(value="lora") %}
         {% if font_family == "lora" %}
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/lora@4.5.11/index.min.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/lora@4.5.11/index.min.css" media="print" onload="this.media='all'">
         {% elif font_family == "source-serif-pro" %}
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/source-serif-pro@4.5.11/index.min.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/source-serif-pro@4.5.11/index.min.css" media="print" onload="this.media='all'">
         {% elif font_family == "crimson-text" %}
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/crimson-text@4.5.11/index.min.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/crimson-text@4.5.11/index.min.css" media="print" onload="this.media='all'">
         {% elif font_family == "playfair-display" %}
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@4.5.11/index.min.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@4.5.11/index.min.css" media="print" onload="this.media='all'">
         {% elif font_family == "merriweather" %}
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/merriweather@4.5.11/index.min.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/merriweather@4.5.11/index.min.css" media="print" onload="this.media='all'">
         {% endif %}
+        <noscript>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.min.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@4.5.8/index.min.css">
+            {% if font_family == "lora" %}
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/lora@4.5.11/index.min.css">
+            {% elif font_family == "source-serif-pro" %}
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/source-serif-pro@4.5.11/index.min.css">
+            {% elif font_family == "crimson-text" %}
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/crimson-text@4.5.11/index.min.css">
+            {% elif font_family == "playfair-display" %}
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@4.5.11/index.min.css">
+            {% elif font_family == "merriweather" %}
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/merriweather@4.5.11/index.min.css">
+            {% endif %}
+        </noscript>
     {% else %}
         <link href={{ get_url(path="fonts.css") }} rel="stylesheet" />
     {% endif %}
@@ -127,6 +181,10 @@
                 --text-font: "ZedTextFtl", "Space Grotesk", sans-serif !important;
                 --header-font: "ZedDisplayFtl", "Space Grotesk", sans-serif !important;
             {% endif %}
+            
+            {# Set base font size from config #}
+            {% set base_font_size = config.extra.base_font_size | default(value="16") %}
+            --font-size-base: {{ base_font_size }}px !important;
         }
         
         :root.light {
@@ -139,6 +197,57 @@
             --primary-color: {{ primary_color_dark }} !important;
         }
         
+        /* Accessibility: Skip link styles */
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: -10000px;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 1000;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        .skip-link:focus {
+            top: 6px;
+            left: 6px;
+        }
+
+        /* Breadcrumb navigation styles */
+        .breadcrumbs {
+            margin: 1rem 0 0.5rem 0;
+            font-size: 0.9em;
+            color: var(--text-color-secondary);
+        }
+
+        .breadcrumbs ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .breadcrumbs li:not(:last-child)::after {
+            content: "→";
+            margin-left: 0.5rem;
+            color: var(--text-color-tertiary);
+        }
+
+        .breadcrumbs a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+
         {% set case_mode = config.extra.case_mode | default(value="normal") %}
         {% if case_mode == "lowercase" %}
         :root {
@@ -230,6 +339,47 @@
         <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
         </script>
     {% endif %}
+
+    {# Structured Data for SEO #}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "{% if page %}{% if page.date %}BlogPosting{% else %}WebPage{% endif %}{% else %}{% if current_path == '/' %}Person{% else %}WebPage{% endif %}{% endif %}",
+        "name": "{% if current_path == '/' %}{{ config.title }}{% else %}{% if page.title %}{{ page.title }}{% elif section.title %}{{ section.title }}{% else %}{{ config.title }}{% endif %}{% endif %}",
+        "headline": "{% if page.title %}{{ page.title }}{% elif section.title %}{{ section.title }}{% else %}{{ config.title }}{% endif %}",
+        {% if page.description or config.description %}"description": "{% if page.description %}{{ page.description | escape }}{% else %}{{ config.description | escape }}{% endif %}",{% endif %}
+        "url": "{% if page %}{{ page.permalink }}{% elif section %}{{ section.permalink }}{% else %}{{ config.base_url }}{% endif %}",
+        {% if current_path == "/" %}
+        "jobTitle": "PhD Researcher",
+        "affiliation": {
+            "@type": "Organization",
+            "name": "Technical University of Munich",
+            "url": "https://www.tum.de"
+        },
+        "knowsAbout": ["Machine Learning", "Graph Neural Networks", "Artificial Intelligence", "Deep Learning"],
+        "sameAs": [
+            "https://github.com/guerrantif/",
+            "https://www.linkedin.com/in/filippoguerranti/",
+            "https://scholar.google.com/citations?user=uekwkvYAAAAJ",
+            "https://x.com/guerrantif"
+        ],
+        {% endif %}
+        {% if page and page.date %}
+        "datePublished": "{{ page.date | date(format='%Y-%m-%d') }}",
+        "dateModified": "{{ page.updated | default(value=page.date) | date(format='%Y-%m-%d') }}",
+        {% endif %}
+        "author": {
+            "@type": "Person",
+            "name": "{{ config.author | default(value='Filippo Guerranti') }}",
+            "url": "{{ config.base_url }}"
+        },
+        "publisher": {
+            "@type": "Person",
+            "name": "{{ config.author | default(value='Filippo Guerranti') }}",
+            "url": "{{ config.base_url }}"
+        }
+    }
+    </script>
 
     {# RSS #}
     {% if config.generate_feeds %}

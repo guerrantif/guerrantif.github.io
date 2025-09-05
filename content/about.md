@@ -1,35 +1,34 @@
 +++
 title = "About"
+description = "Learn about Filippo Guerranti - Italian PhD researcher in machine learning at TUM Munich. Discover his background in AI research, triathlon training, and passion for data-driven learning."
 [extra]
 toc = false
 +++
 
-Welcome to my personal corner of the internet. Here you can find out more about me, my work, and my interests.
+## Who am I?
 
-## TL;DR
+I'm an Italian PhD researcher in machine learning at [TUM](https://www.tum.de), based in Munich and working with the [DAML](https://www.cs.cit.tum.de/daml) chair under the supervision of [Prof. Dr. Stephan Günnemann](https://www.cs.cit.tum.de/daml/guennemann/).  
+Outside research, I spend much of my time training for triathlons and long-distance events.
 
-- Italian living in Munich.
-- PhD researcher at [TUM](https://www.tum.de), working with the [DAML](https://www.cs.cit.tum.de/daml) chair under the supervision of [Prof. Dr. Stephan Günnemann](https://www.cs.cit.tum.de/daml/guennemann/).
-- Passionate about endurance sports, particularly triathlon and long-distance events.
+If I had to describe myself in a single line, it would be:
 
-If I were to describe myself in one sentence, that would be:
+> _A curious mind drawn to **learning**, guided by **data**, and committed to **well-being**._
 
-> "_Lifelong **learner** with a passion for **data**-driven insights and general **well-being**._"
+These aren't abstract buzzwords for me, but instead resonate with my daily experiences and values:
 
-This translates into different aspects of my life, from work to hobbies.
-The keywords, as you may easily infer, are:
-
-- **Learning**: I really enjoy deepening my knowledge of "stuff", being it technical quirks or philosophical dilemmas.
-- **Data**: data gives us access to patterns and insights that can help us steer our decisions and actions in a more informed way.
-- **Well-being**: as the Latins said, "[_Mens sana in corpore sano_](https://en.wikipedia.org/wiki/Mens_sana_in_corpore_sano)". I strive to maintain a balance between my mental and physical well-being.
+- **Learning**: from debugging obscure technical issues to exploring philosophical questions.  
+- **Data**: both as the foundation of my research and as a tool to make sense of patterns in life and sport.  
+- **Well-being**: I try to balance mental focus with physical training, following the old idea of a _mens sana in corpore sano_.
 
 ## Why this website?
 
-- It is apparently very common for researchers in computer science and machine learning to have a personal website.
-- It is hard for me to have a public presence online, and I see it as an opportunity to exit my comfort zone.
-- I like the idea of having a personal space where I can share whatever I find interesting or valuable.
+Three main reasons:  
 
-## What can you expect to find here?
+- **Societal**: Many times I've been stuck until I stumbled on a half-forgotten blog post that had the exact solution to my problem. Sharing knowledge online helps others in the same way.  
+- **Personal**: I'm naturally introverted, and maintaining a public site pushes me to step outside my comfort zone.  
+- **Professional**: It's also a place to showcase research and ideas, something common in computer science and machine learning circles.
 
-- **Research**: Insights and updates on my ongoing research projects.
-- **Thoughts**: Reflections on various topics related (and not limited) to machine learning, sports, and personal development.
+## What you'll find here
+
+- **Research**: updates and insights on my projects.  
+- **Thoughts**: reflections on machine learning, computer science, technology, well-being, sports, and personal development.

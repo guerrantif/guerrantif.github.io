@@ -1,0 +1,13 @@
+{% if current_path != "/" %}
+<nav class="breadcrumbs" aria-label="Breadcrumb navigation">
+    <ol>
+        <li><a href="/">Home</a></li>
+        {% if section %}
+            <li><a href="{{ section.permalink }}">{{ section.title }}</a></li>
+        {% endif %}
+        {% if page and page.title %}
+            <li aria-current="page">{{ page.title }}</li>
+        {% endif %}
+    </ol>
+</nav>
+{% endif %}

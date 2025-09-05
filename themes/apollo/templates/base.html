@@ -6,6 +6,8 @@
     {% include "partials/header.html" %}
 
     <body>
+        <!-- Skip link for accessibility -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
         <div class="body-content">
             <div class="left-content">
                 {% block left_content %}
@@ -16,9 +18,11 @@
                 {% include "partials/nav.html" %}
 
                 {# Post page is the default #}
-                {% block main_content %}
-                    Nothing here?!
-                {% endblock main_content %}
+                <main id="main-content" role="main">
+                    {% block main_content %}
+                        Nothing here?!
+                    {% endblock main_content %}
+                </main>
 
                 {% if page.extra.comment is defined %}
                     {% set show_comment = page.extra.comment %}

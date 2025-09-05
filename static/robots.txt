@@ -1,4 +1,17 @@
 User-agent: *
 Allow: /
 
+# Sitemap location
 Sitemap: https://filippoguerranti.com/sitemap.xml
+
+# Allow access to RSS feed
+Allow: /atom.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Block access to any potential admin or private directories
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /themes/
+Disallow: /templates/
