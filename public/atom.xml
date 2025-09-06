@@ -44,12 +44,11 @@
         
         <!-- Enhanced content with reading time and word count -->
         <content type="html" xml:base="https://filippoguerranti.com/blog/hello-world/">
-            &lt;p&gt;&lt;em&gt;Reading time: 1 min • 29 words&lt;/em&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;em&gt;Reading time: 1 min • 32 words&lt;/em&gt;&lt;/p&gt;
             
             &lt;pre data-lang=&quot;python&quot; class=&quot;language-python z-code&quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;z-source z-python&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-python&quot;&gt;&lt;span class=&quot;z-meta z-qualified-name z-python&quot;&gt;&lt;span class=&quot;z-variable z-function z-python&quot;&gt;&lt;span class=&quot;z-support z-function z-builtin z-python&quot;&gt;print&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-python&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-arguments z-begin z-python&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;z-meta z-string z-python&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-python&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-python&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;z-meta z-string z-python&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-python&quot;&gt;Hello, World!&lt;span class=&quot;z-punctuation z-definition z-string z-end z-python&quot;&gt;&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;z-punctuation z-section z-arguments z-end z-python&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;First blog post on this website.&lt;/p&gt;
-&lt;p&gt;In case you are interested to know something more about me or this website, the &lt;a href=&quot;../../about/&quot;&gt;About&lt;/a&gt; page is a good starting point.&lt;/p&gt;
+&lt;p&gt;Welcome to the first post on this website! If you want to learn more about me or the purpose of this site, the &lt;a href=&quot;../../about/&quot;&gt;About&lt;/a&gt; page is a good place to start.&lt;/p&gt;
 
             
             &lt;p&gt;&lt;a href="https://filippoguerranti.com/blog/hello-world/"&gt;Read more on the website →&lt;/a&gt;&lt;/p&gt;

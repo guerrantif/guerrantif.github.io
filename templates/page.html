@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% macro content(page) %}
-<div class="visible-element-observer-root" data-selector="main article p">
+<div class="visible-element-observer-root" data-selector="main article p" id="top">
     <main>
         <article>
             <div class="title">
@@ -79,9 +79,9 @@
             
             {% if page.relative_path is starting_with("blog/") %}
                 <div class="back-to-section">
-                    <a href="{{ get_url(path='@/blog/_index.md') | safe }}" class="back-link" aria-label="Back to Blog">
+                    <a href="{{ get_url(path='@/blog/_index.md') | safe }}" class="back-link">
                         {% set arrow_svg = load_data(path="static/icons/left-arrow.svg", format="plain") %}
-                        {{ arrow_svg | replace(from='<svg', to='<svg role="img" aria-label="Back arrow"') | replace(from='fill="#000000"', to='fill="currentColor"') | replace(from='fill="rgb(0%, 0%, 0%)"', to='fill="currentColor"') | replace(from='fill="black"', to='fill="currentColor"') | replace(from='fill="#000"', to='fill="currentColor"') | safe }} Back to Blog
+                        {{ arrow_svg | replace(from='fill="#000000"', to='fill="currentColor"') | replace(from='fill="rgb(0%, 0%, 0%)"', to='fill="currentColor"') | replace(from='fill="black"', to='fill="currentColor"') | replace(from='fill="#000"', to='fill="currentColor"') | safe }} Back to Blog
                     </a>
                 </div>
             {% endif %}
@@ -96,7 +96,10 @@
 {% endblock main_content %}
 
 {% block right_content %}
-    {# Optional table of contents #}
+    {% if page.relative_path is starting_with("blog/") %}
+        {% include "partials/blog-navigation.html" %}
+    {% endif %}
+    
     {% if (page.extra.toc | default(value=config.extra.toc) | default(value=false)) and page.toc %}
         {% include "partials/toc.html" %}
     {% endif %}

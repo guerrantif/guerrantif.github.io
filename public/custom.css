@@ -1,0 +1,20 @@
+.blog-navigation {
+    margin-bottom: 1.5rem;
+}
+
+.blog-navigation .nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.blog-navigation .nav a {
+    font-size: 0.875rem;
+}
+
+
+/* Reset TOC hover to match site defaults */
+.toc a:hover {
+    color: var(--primary-color) !important;
+    text-decoration: none !important;
+}

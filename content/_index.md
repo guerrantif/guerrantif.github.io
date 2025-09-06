@@ -8,15 +8,15 @@ subtitle = "PhD researcher in machine learning for graphs and structured data"
 toc = false
 +++
 
-I am a PhD researcher at [TUM](https://www.tum.de), focusing on machine learning for graphs and structured data.  
-Outside research, I’m interested in endurance sports, science-based approaches to personal development, and the balance between mental and physical well-being.
+I am a PhD researcher at [TUM](https://www.tum.de), focusing on [machine learning for graphs and structured data](/research).  
+Outside research, I'm interested in endurance sports, science-based approaches to personal development, and the balance between mental and physical well-being. Read more [about me](/about) and my approach to work and life.
 
-## explore more
+## Explore more
 
-- **{{ highlight(body="about me") }}** → [About](/about), [Blog](/blog), [Contact](/contact)  
-- **{{ highlight(body="my research") }}** → [Research](/research)  
+- **{{ highlight(body="About me") }}** → [About](/about), [Blog](/blog), [Contact](/contact)  
+- **{{ highlight(body="My research") }}** → [Research](/research)  
 
-## why everything is lowercase
+## Why everything is lowercase
 
 - It shifts attention toward content and ideas rather than typographic convention.  
 - Reading research suggests lowercase can be less visually taxing and more fluent.[^1] [^2]  

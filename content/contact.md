@@ -5,7 +5,7 @@ description = "Contact Filippo Guerranti for research collaborations, questions 
 toc = false
 +++
 
-I’m happy to hear from anyone interested in research collaborations, questions about my work, or discussions on related topics. To help me respond effectively, it’s useful if messages are brief and focused on topics related to my research or professional interests. I try to reply within a week, though it may take a little longer at busy times.
+I'm happy to hear from anyone interested in research collaborations, questions about my work, or discussions on related topics. Feel free to explore my [research publications](/research) before reaching out to get a sense of my current work and interests. To help me respond effectively, it's useful if messages are brief and focused on topics related to my research or professional interests. I try to reply within a week, though it may take a little longer at busy times.
 
 ## Email
 

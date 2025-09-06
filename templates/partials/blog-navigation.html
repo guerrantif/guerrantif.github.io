@@ -1,0 +1,30 @@
+<div class="blog-navigation">
+    {% set blog_section = get_section(path="blog/_index.md") %}
+    {% set all_posts = blog_section.pages | filter(attribute="draft", value=false) | sort(attribute="date") %}
+    
+    {% set_global prev_post = false %}
+    {% set_global next_post = false %}
+    {% set_global found = false %}
+    
+    {% for post in all_posts %}
+        {% if found %}
+            {% set_global next_post = post %}
+            {% break %}
+        {% endif %}
+        {% if post.path == page.path %}
+            {% set_global found = true %}
+        {% elif not found %}
+            {% set_global prev_post = post %}
+        {% endif %}
+    {% endfor %}
+    
+    <div class="nav">
+        {% if prev_post %}
+            <a href="{{ prev_post.permalink }}" title="{{ prev_post.title }}">← Prev.</a>
+        {% endif %}
+        {% if next_post %}
+            <a href="{{ next_post.permalink }}" title="{{ next_post.title }}">→ Next</a>
+        {% endif %}
+        <a href="#top">↑ Top</a>
+    </div>
+</div>

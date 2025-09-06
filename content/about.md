@@ -7,7 +7,7 @@ toc = false
 
 ## Who am I?
 
-I'm an Italian PhD researcher in machine learning at [TUM](https://www.tum.de), based in Munich and working with the [DAML](https://www.cs.cit.tum.de/daml) chair under the supervision of [Prof. Dr. Stephan Günnemann](https://www.cs.cit.tum.de/daml/guennemann/).  
+I'm an Italian PhD researcher in machine learning at [TUM](https://www.tum.de), based in Munich and working with the [DAML](https://www.cs.cit.tum.de/daml) chair under the supervision of [Prof. Dr. Stephan Günnemann](https://www.cs.cit.tum.de/daml/guennemann/). You can explore my [research publications](/research) to learn more about my work in graph neural networks and structured data.  
 Outside research, I spend much of my time training for triathlons and long-distance events.
 
 If I had to describe myself in a single line, it would be:
@@ -30,5 +30,5 @@ Three main reasons:
 
 ## What you'll find here
 
-- **Research**: updates and insights on my projects.  
-- **Thoughts**: reflections on machine learning, computer science, technology, well-being, sports, and personal development.
+- **Research**: updates and insights on my projects in my [research section](/research).  
+- **Thoughts**: reflections on machine learning, computer science, technology, well-being, sports, and personal development shared through my [blog](/blog).

@@ -102,13 +102,28 @@
     {# Performance optimizations - DNS prefetch and preconnect #}
     <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
     <link rel="dns-prefetch" href="//scholar.google.com">
+    <link rel="dns-prefetch" href="//mathjax.org">
     <link rel="preconnect" href="{{ config.base_url }}" crossorigin>
-
-    {# Font preloading - Charter uses system fonts, no preloading needed #}
     
-    {# Preload critical CSS #}
-    <link rel="preload" href="{{ get_url(path='main.css') }}" as="style"
-          onload="this.onload=null;this.rel='stylesheet'">
+    {# Prefetch likely next pages for better navigation #}
+    {% if current_path == "/" %}
+        <link rel="prefetch" href="{{ get_url(path='/research') }}">
+        <link rel="prefetch" href="{{ get_url(path='/about') }}">
+    {% elif current_path == "/about" %}
+        <link rel="prefetch" href="{{ get_url(path='/research') }}">
+    {% endif %}
+    
+    {# Font preloading for better performance #}
+    {% set font_family = config.extra.font_family | default(value="source-serif-pro") %}
+    {% if font_family == "source-serif-pro" %}
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+        <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fontsource/source-serif-pro@4.5.11/files/source-serif-pro-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    {% endif %}
+
+    
+    {# Critical CSS optimization #}
+    <link rel="preload" href="{{ get_url(path='main.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ get_url(path='main.css') }}"></noscript>
 
     {# Font from cdn or disk #}
     {% if config.extra.use_cdn | default(value=false) %}
@@ -155,16 +170,13 @@
     {# Set CSS font and color variables based on config #}
     <style>
         :root {
-            {% set font_family = config.extra.font_family | default(value="lora") %}
-            {% if font_family == "charter" %}
-                --text-font: "Charter", "Iowan Old Style", Georgia, serif !important;
-                --header-font: "Charter", "Iowan Old Style", Georgia, serif !important;
+            {% set font_family = config.extra.font_family | default(value="source-serif-pro") %}
+            {% if font_family == "source-serif-pro" %}
+                --text-font: "Source Serif Pro", Georgia, serif !important;
+                --header-font: "Source Serif Pro", Georgia, serif !important;
             {% elif font_family == "lora" %}
                 --text-font: "Lora", Georgia, serif !important;
                 --header-font: "Lora", Georgia, serif !important;
-            {% elif font_family == "source-serif-pro" %}
-                --text-font: "Source Serif Pro", Georgia, serif !important;
-                --header-font: "Source Serif Pro", Georgia, serif !important;
             {% elif font_family == "crimson-text" %}
                 --text-font: "Crimson Text", Georgia, serif !important;
                 --header-font: "Crimson Text", Georgia, serif !important;
@@ -196,6 +208,14 @@
             {% set primary_color_dark = config.extra.primary_color_dark | default(value="#838383") %}
             --primary-color: {{ primary_color_dark }} !important;
         }
+
+        /* Font display optimization for better loading performance */
+        {% if font_family == "source-serif-pro" %}
+        @font-face {
+            font-family: 'Source Serif Pro';
+            font-display: swap;
+        }
+        {% endif %}
         
         /* Accessibility: Skip link styles */
         .skip-link {
@@ -480,4 +500,143 @@
 
     {# Mobile menu functionality #}
     <script defer src="{{ get_url(path='js/main.js') }}"></script>
+
+    {# Service Worker for caching performance #}
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('Service Worker registered with scope: ', registration.scope);
+                    })
+                    .catch(function(error) {
+                        console.log('Service Worker registration failed: ', error);
+                    });
+            });
+        }
+    </script>
+
+    {# Structured Data for SEO #}
+    {% if current_path == "/" %}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Filippo Guerranti",
+        "givenName": "Filippo",
+        "familyName": "Guerranti",
+        "jobTitle": "PhD Researcher",
+        "description": "PhD researcher in machine learning for graphs and structured data",
+        "url": "{{ config.base_url }}",
+        "sameAs": [
+            "https://scholar.google.com/citations?user=uekwkvYAAAAJ",
+            "https://github.com/guerrantif",
+            "https://www.linkedin.com/in/filippoguerranti",
+            "https://x.com/guerrantif"
+        ],
+        "affiliation": {
+            "@type": "Organization",
+            "name": "Technical University of Munich",
+            "alternateName": "TUM",
+            "url": "https://www.tum.de",
+            "department": {
+                "@type": "Organization",
+                "name": "Data Analytics and Machine Learning",
+                "alternateName": "DAML",
+                "url": "https://www.cs.cit.tum.de/daml"
+            }
+        },
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Technical University of Munich",
+            "url": "https://www.tum.de"
+        },
+        "knowsAbout": [
+            "Machine Learning",
+            "Graph Neural Networks", 
+            "Structured Data",
+            "Graph Machine Learning",
+            "Large Language Models",
+            "Deep Learning",
+            "Artificial Intelligence"
+        ],
+        "alumniOf": "Technical University of Munich",
+        "nationality": "Italian",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Munich",
+            "addressCountry": "Germany"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "professional",
+            "email": "fg@filippoguerranti.com"
+        }
+    }
+    </script>
+    {% endif %}
+
+    {# Article structured data for blog posts #}
+    {% if page and page.relative_path is starting_with("blog/") and page.title != "Blog" %}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "{{ page.title }}",
+        "description": "{{ page.description | default(value=page.summary | striptags | truncate(length=160)) }}",
+        "url": "{{ config.base_url }}{{ page.permalink | replace(from=config.base_url, to='') }}",
+        "datePublished": "{{ page.date | date(format='%Y-%m-%dT%H:%M:%S%z') }}",
+        {% if page.updated %}"dateModified": "{{ page.updated | date(format='%Y-%m-%dT%H:%M:%S%z') }}",{% endif %}
+        "author": {
+            "@type": "Person",
+            "name": "Filippo Guerranti",
+            "url": "{{ config.base_url }}"
+        },
+        "publisher": {
+            "@type": "Person",
+            "name": "Filippo Guerranti",
+            "url": "{{ config.base_url }}"
+        },
+        {% if page.taxonomies and page.taxonomies.tags %}
+        "keywords": [
+            {%- for tag in page.taxonomies.tags -%}
+            "{{ tag }}"{% if not loop.last %},{% endif %}
+            {%- endfor -%}
+        ],
+        {% endif %}
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ config.base_url }}{{ page.permalink | replace(from=config.base_url, to='') }}"
+        },
+        "articleSection": "Blog",
+        {% if page.word_count %}"wordCount": {{ page.word_count }},{% endif %}
+        "inLanguage": "en-US"
+    }
+    </script>
+    {% endif %}
+
+    {# Enhanced Open Graph and Twitter Cards #}
+    {% if current_path == "/" %}
+        <meta property="og:type" content="profile" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Filippo Guerranti" />
+        <meta property="profile:first_name" content="Filippo" />
+        <meta property="profile:last_name" content="Guerranti" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@guerrantif" />
+        <meta name="twitter:creator" content="@guerrantif" />
+    {% else %}
+        <meta property="og:type" content="article" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Filippo Guerranti" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@guerrantif" />
+        <meta name="twitter:creator" content="@guerrantif" />
+    {% endif %}
+
+    {# Canonical URL #}
+    <link rel="canonical" href="{{ config.base_url }}{{ current_path }}" />
+
 </head>

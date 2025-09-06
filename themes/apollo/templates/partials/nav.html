@@ -17,7 +17,7 @@
                 <a href="{{ social.url }}" class="social" rel="me noopener noreferrer" target="_blank" aria-label="{{ social.name }} profile">
                     {% set icon_path = "themes/apollo/static/icons/social/" ~ social.icon ~ ".svg" %}
                     {% set icon_svg = load_data(path=icon_path, format="plain") %}
-                    {{ icon_svg | replace(from='fill="#000000"', to='fill="currentColor"') | replace(from='fill="rgb(0%, 0%, 0%)"', to='fill="currentColor"') | replace(from='fill="black"', to='fill="currentColor"') | safe }}
+                    {{ icon_svg | replace(from='<svg', to='<svg role="img" aria-label="' ~ social.name ~ ' icon"') | replace(from='fill="#000000"', to='fill="currentColor"') | replace(from='fill="rgb(0%, 0%, 0%)"', to='fill="currentColor"') | replace(from='fill="black"', to='fill="currentColor"') | safe }}
                 </a>
             {% endfor %}
         </div>
@@ -28,11 +28,11 @@
         <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu">
             <span class="hamburger-icon">
                 {% set hamburger_svg = load_data(path="static/icons/hamburger.svg", format="plain") %}
-                {{ hamburger_svg | replace(from='fill="#000000"', to='fill="currentColor"') | replace(from='fill="rgb(0%, 0%, 0%)"', to='fill="currentColor"') | replace(from='fill="black"', to='fill="currentColor"') | replace(from='fill="#000"', to='fill="currentColor"') | replace(from='fill="currentColor"', to='fill="currentColor"') | safe }}
+                {{ hamburger_svg | replace(from='<svg', to='<svg role="img" aria-label="Menu"') | replace(from='fill="#000000"', to='fill="currentColor"') | replace(from='fill="rgb(0%, 0%, 0%)"', to='fill="currentColor"') | replace(from='fill="black"', to='fill="currentColor"') | replace(from='fill="#000"', to='fill="currentColor"') | replace(from='fill="currentColor"', to='fill="currentColor"') | safe }}
             </span>
             <span class="cross-icon">
                 {% set cross_svg = load_data(path="static/icons/cross.svg", format="plain") %}
-                {{ cross_svg | replace(from='fill="#000000"', to='fill="currentColor"') | replace(from='fill="rgb(0%, 0%, 0%)"', to='fill="currentColor"') | replace(from='fill="black"', to='fill="currentColor"') | replace(from='fill="#000"', to='fill="currentColor"') | replace(from='fill="currentColor"', to='fill="currentColor"') | safe }}
+                {{ cross_svg | replace(from='<svg', to='<svg role="img" aria-label="Close menu"') | replace(from='fill="#000000"', to='fill="currentColor"') | replace(from='fill="rgb(0%, 0%, 0%)"', to='fill="currentColor"') | replace(from='fill="black"', to='fill="currentColor"') | replace(from='fill="#000"', to='fill="currentColor"') | replace(from='fill="currentColor"', to='fill="currentColor"') | safe }}
             </span>
         </button>
         

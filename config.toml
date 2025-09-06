@@ -35,8 +35,8 @@ mathjax_dollar_inline_enable = true
 
 
 # Font configuration
-# Options: "charter", "lora", "source-serif-pro", "crimson-text", "playfair-display", "merriweather", "system-serif", "zed" (original)
-font_family = "charter"
+# Options: "lora", "source-serif-pro", "crimson-text", "playfair-display", "merriweather", "system-serif", "zed" (original)
+font_family = "source-serif-pro"
 # Base font size in pixels - controls overall site text size (default: 16)
 base_font_size = "16"
 
@@ -47,6 +47,9 @@ primary_color_dark = "#60a5fa"   # Lighter blue for dark theme
 
 # Case configuration
 case_mode = "lowercase"  # Options: "normal", "lowercase"
+
+# Custom stylesheets
+stylesheets = ["custom.css"]
 
 socials = [
   { name = "X", url = "https://x.com/guerrantif", icon = "x-twitter" },
