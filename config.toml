@@ -27,7 +27,7 @@ bottom_footnotes = true
 
 [extra]
 theme = "auto" # options: auto, toggle
-favicon = "/icons/favicon.ico"
+favicon = "/icons/favicon.svg"
 toc = true
 fancy_code = true
 mathjax = true
